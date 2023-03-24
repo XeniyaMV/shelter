@@ -151,7 +151,44 @@ nav a:active {
 }
 
 .about {
+  padding: 80px 40px 100px 40px;
   background-color: #FFFFFF;
+}
+
+.about_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+}
+
+.about_content_img {
+  width: 300px;
+  height: 408px;
+}
+
+.about_content_text {
+  width: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+.about_content_text h3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  color: #545454;
+}
+.about_content_text p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #4C4C4C;
 }
 
 .footer {
