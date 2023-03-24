@@ -17,6 +17,12 @@ html, body {
     width: 100%;
     height: 100%;
 }
+body {
+    background: url(/xeniyamv-JSFE2023Q1/shelter/assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%) fixed;
+    // background: url(/xeniyamv-JSFE2023Q1/shelter/assets/images/noise_transparent@2x.png), radial-gradient( #5B483A, #262425);
+ 
+
+}
 
 @mixin reset-a {
     text-decoration: none;
@@ -53,7 +59,11 @@ html, body {
 // --START SCREEN STARTS--
 .start_screen {
     height: 908px;
-    background: url(/xeniyamv-JSFE2023Q1/shelter/assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+    @media screen and (min-width: 1280px) {
+        width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 
@@ -180,12 +190,16 @@ nav {
 }
 //--START SCREEN ENDS--
 
+//--ABOUT STARTS--
+.about {
+    background-color: $color-light-xl;
+}
+//--ABOUT ENDS--
 
 //--FOOTER STARTS--
 
     .footer {
         height: 350px;
-        background: url(/xeniyamv-JSFE2023Q1/shelter/assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 
         display: flex;
         flex-direction: row;
@@ -194,6 +208,12 @@ nav {
 
         padding: 40px 40px 0px 40px;
         gap: 160px;
+
+        @media screen and (min-width: 1280px) {
+            width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     .footer_img {

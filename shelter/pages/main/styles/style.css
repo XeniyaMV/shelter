@@ -10,6 +10,10 @@ html, body {
   height: 100%;
 }
 
+body {
+  background: url(/xeniyamv-JSFE2023Q1/shelter/assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%) fixed;
+}
+
 .start_screen_content_text button {
   padding: 15px 45px;
   width: 207px;
@@ -27,7 +31,13 @@ html, body {
 
 .start_screen {
   height: 908px;
-  background: url(/xeniyamv-JSFE2023Q1/shelter/assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+}
+@media screen and (min-width: 1280px) {
+  .start_screen {
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 header {
@@ -140,15 +150,25 @@ nav a:active {
   width: 698px;
 }
 
+.about {
+  background-color: #FFFFFF;
+}
+
 .footer {
   height: 350px;
-  background: url(/xeniyamv-JSFE2023Q1/shelter/assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 40px 40px 0px 40px;
   gap: 160px;
+}
+@media screen and (min-width: 1280px) {
+  .footer {
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .footer_img {
