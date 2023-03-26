@@ -278,6 +278,14 @@ nav a:active {
   width: 187px;
   background-color: #FAFAFA;
 }
+.pet_card:hover .pet_img img {
+  background-color: #F6F6F6;
+  fill: #F6F6F6;
+}
+.pet_card:hover button {
+  background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
+}
 
 .help {
   background-color: #FFFFFF;

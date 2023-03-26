@@ -330,6 +330,20 @@ nav {
         background-color: $color-light-s;
 
     }
+    &:hover {
+        .pet_img {
+            img {
+
+                background-color: $color-light-l;
+                fill: $color-light-l;
+            }
+        }
+
+        button {
+            background-color: $color-primary-light;
+            border: 2px solid $color-primary-light;
+        }
+    }
 }
 
 
