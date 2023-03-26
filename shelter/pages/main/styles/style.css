@@ -31,6 +31,7 @@ body {
 }
 .pet_card button:hover, .pets_content button:hover, .start_screen_content_text button:hover {
   background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
 }
 
 .pets_content .circle_button {
@@ -40,6 +41,12 @@ body {
   background-color: #F6F6F6;
   background-repeat: no-repeat;
   background-position: center;
+}
+.pets_content .circle_button:disabled {
+  border: 2px solid #CDCDCD;
+}
+.pets_content .circle_button:disabled:hover {
+  background-color: #F6F6F6;
 }
 
 .start_screen {
@@ -96,7 +103,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-nav a:link {
+nav a {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -104,7 +111,7 @@ nav a:link {
   line-height: 160%;
   color: #CDCDCD;
 }
-nav a:visited {
+nav a:hover {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;

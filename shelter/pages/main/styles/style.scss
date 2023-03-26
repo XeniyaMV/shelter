@@ -59,6 +59,7 @@ body {
 
     &:hover {
         background-color: $color-primary-light;
+        border: 2px solid $color-primary-light;
     }
 }
 
@@ -69,6 +70,13 @@ body {
     background-color: $color-light-l;
     background-repeat: no-repeat;
     background-position: center;
+
+    &:disabled {
+        border: 2px solid $color-dark-s;
+        &:hover {
+            background-color: $color-light-l;
+        }
+    }
 }
 
 // --START SCREEN STARTS--
@@ -103,16 +111,13 @@ header {
     text-align: center;
     a{
         .logo_title {
-            // h1 {
-                font-style: normal;
-                font-weight: 400;
-                font-size: 32px;
-                color: $color-primary;
-                line-height: 110%;
-                letter-spacing: 0.06em;
-                text-align: center;
-                
-            // }
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            color: $color-primary;
+            line-height: 110%;
+            letter-spacing: 0.06em;
+            text-align: center;    
         }
 
         .logo_subtitle {
@@ -133,13 +138,13 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    a:link {
+    a {
         @include nav-a-default;
     }
     
-    a:visited {
+    a:hover {
         @include nav-a-default;
-        color: $color-light-s;  
+        color: $color-light-s;
     }
 
     // ! link a bit jump
