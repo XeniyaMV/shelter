@@ -39,6 +39,7 @@ body {
     font-size: 15px;
     line-height: 160%;
     color: $color-dark-s;
+    transition: color 0.5s;
 }
 
 %button {
@@ -48,6 +49,8 @@ body {
     background-color: $color-primary;
     border-color: $color-primary;
     border-radius: 100px;
+    transition: background-color 0.5s;
+
 
     font-style: normal;
     font-weight: 400;
@@ -56,6 +59,8 @@ body {
 
     color: $color-dark-3xl;
     border: 2px solid $color-primary;
+
+    cursor: pointer;
 
     &:hover {
         background-color: $color-primary-light;
@@ -162,6 +167,9 @@ nav {
         border-bottom-style: solid;
         border-bottom-color: $color-primary;
         border-bottom-width: 3px;
+        &:hover {
+            cursor: default;
+        }
     }
     
     
@@ -205,13 +213,11 @@ nav {
         line-height: 160%;
     }
 
+
     button {
         @extend %button;
-        a {
-            @include reset-a;
-            
-        }
-    }    
+        
+    }   
 }
 
 .start_screen_content_img {
@@ -292,11 +298,9 @@ nav {
     button {
         @extend %button;
         width: 261px;
-        a {
-            @include reset-a;
 
         }
-    }
+
     .circle_button{
         @extend %circle_button;
     }
@@ -331,6 +335,8 @@ nav {
     align-items: center;
     gap: 30px;
 
+    transition: background-color 0.5s;
+
     .pet_name {
         color: $color-dark-l;
         font-style: normal;
@@ -346,13 +352,8 @@ nav {
 
     }
     &:hover {
-        .pet_img {
-            img {
-
-                background-color: $color-light-l;
-                fill: $color-light-l;
-            }
-        }
+        cursor: pointer;
+        background-color: $color-light-xl;
 
         button {
             background-color: $color-primary-light;
@@ -488,6 +489,8 @@ nav {
         flex-direction: row;
         justify-content: space-between;
 
+        transition: background-color 0.5s;
+
 
         .credit_card_icon {
             width: 30px;
@@ -503,6 +506,10 @@ nav {
                 letter-spacing: 0.06em;
                 color: $color-dark-l;
             }
+        }
+
+        &:hover {
+            background-color: $color-primary-light;
         }
 
     }
@@ -564,6 +571,14 @@ nav {
                 @include reset-a;
                 display: flex;
                 flex-direction: row;
+
+                &:hover {
+                    .item_content {
+                        h4 {
+                            color: $color-light-s;
+                        }
+                    }
+                }
             }
 
             .item_icon {
@@ -583,6 +598,7 @@ nav {
                     line-height: 115%;
                     letter-spacing: 0.06em; 
                     color: $color-primary;
+                    transition: color 0.5s;
                 }
             }
         }

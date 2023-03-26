@@ -40,6 +40,8 @@ body {
     font-size: 15px;
     line-height: 160%;
     color: $color-dark-l;
+    transition: color 0.5s;
+
 }
 
 %button {
@@ -49,6 +51,10 @@ body {
     background-color: $color-primary;
     border-color: $color-primary;
     border-radius: 100px;
+    transition: background-color 0.5s;
+
+    cursor: pointer;
+
 
     font-style: normal;
     font-weight: 400;
@@ -162,6 +168,10 @@ nav {
         border-bottom-style: solid;
         border-bottom-color: $color-primary;
         border-bottom-width: 3px;
+        &:hover {
+            color: $color-dark-l;
+            cursor: default;
+        }
     }
     
 
@@ -213,6 +223,7 @@ nav {
         background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/__.svg");
         transform: rotate(180deg);
         &:disabled {
+            cursor: default;
             background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/__(light).svg");
             transform: rotate(0deg);
         }
@@ -221,6 +232,7 @@ nav {
         background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/_.svg");
         transform: rotate(180deg);
         &:disabled {
+            cursor: default;
             background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/_(light).svg");
             transform: rotate(0deg);
         }
@@ -231,12 +243,14 @@ nav {
     .paginator_right {
         background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/_.svg");
         &:disabled {
+            cursor: default;
             background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/__(light).svg");
         }
     }
     .fast_paginator_right {
         background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/__.svg");
         &:disabled {
+            cursor: default;
             background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/_(light).svg");
         }
     }
@@ -267,6 +281,8 @@ nav {
     align-items: center;
     gap: 30px;
 
+    transition: background-color 0.5s;
+
     .pet_name {
         color: $color-dark-l;
         font-style: normal;
@@ -282,13 +298,8 @@ nav {
 
     }
     &:hover {
-        .pet_img {
-            img {
-
-                background-color: $color-light-l;
-                fill: $color-light-l;
-            }
-        }
+        cursor: pointer;
+        background-color: $color-light-xl;
 
         button {
             background-color: $color-primary-light;
@@ -346,6 +357,14 @@ nav {
             @include reset-a;
             display: flex;
             flex-direction: row;
+
+            &:hover {
+                .item_content {
+                    h4 {
+                        color: $color-light-s;
+                    }
+                }
+            }
         }
 
         .item_icon {
@@ -365,6 +384,7 @@ nav {
                 line-height: 115%;
                 letter-spacing: 0.06em; 
                 color: $color-primary;
+                transition: color 0.5s;
             }
         }
     }
