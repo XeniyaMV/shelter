@@ -129,6 +129,11 @@ nav a:active {
   border-bottom-color: #F1CDB3;
   border-bottom-width: 3px;
 }
+nav .here {
+  border-bottom-style: solid;
+  border-bottom-color: #F1CDB3;
+  border-bottom-width: 3px;
+}
 
 .pets {
   background-color: #F6F6F6;
@@ -276,7 +281,9 @@ nav a:active {
   letter-spacing: 0.06em;
   color: #FFFFFF;
 }
-.info .footer_item {
+.info .footer_item a {
+  text-decoration: none;
+  color: black;
   display: flex;
   flex-direction: row;
 }

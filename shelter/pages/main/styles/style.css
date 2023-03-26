@@ -132,6 +132,12 @@ nav a:active {
   border-bottom-color: #F1CDB3;
   border-bottom-width: 3px;
 }
+nav .here {
+  color: #FAFAFA;
+  border-bottom-style: solid;
+  border-bottom-color: #F1CDB3;
+  border-bottom-width: 3px;
+}
 
 .start_screen_content {
   margin-top: 90px;
@@ -166,6 +172,11 @@ nav a:active {
   font-size: 15px;
   line-height: 160%;
 }
+.start_screen_content_text button a {
+  text-decoration: none;
+  color: black;
+}
+
 .start_screen_content_img {
   width: 698px;
 }
@@ -240,6 +251,10 @@ nav a:active {
 .pets_content button {
   width: 261px;
 }
+.pets_content button a {
+  text-decoration: none;
+  color: black;
+}
 .pets_content .left {
   background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/Arrow.svg");
 }
@@ -307,6 +322,13 @@ nav a:active {
   letter-spacing: 0.06em;
   color: #545454;
 }
+@media screen and (min-width: 1280px) {
+  .help_content {
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .help_list {
   display: flex;
@@ -363,6 +385,10 @@ nav a:active {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+}
+.donation_content_text a {
+  text-decoration: none;
+  color: black;
 }
 .donation_content_text h3 {
   font-style: normal;
@@ -445,7 +471,9 @@ nav a:active {
   letter-spacing: 0.06em;
   color: #FFFFFF;
 }
-.info .footer_item {
+.info .footer_item a {
+  text-decoration: none;
+  color: black;
   display: flex;
   flex-direction: row;
 }

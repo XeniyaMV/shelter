@@ -156,6 +156,13 @@ nav {
         border-bottom-color: $color-primary;
         border-bottom-width: 3px;
     }
+
+    .here {
+        color: $color-light-s;
+        border-bottom-style: solid;
+        border-bottom-color: $color-primary;
+        border-bottom-width: 3px;
+    }
     
     
 
@@ -200,6 +207,10 @@ nav {
 
     button {
         @extend %button;
+        a {
+            @include reset-a;
+            
+        }
     }    
 }
 
@@ -281,6 +292,10 @@ nav {
     button {
         @extend %button;
         width: 261px;
+        a {
+            @include reset-a;
+
+        }
     }
     .circle_button{
         @extend %circle_button;
@@ -352,6 +367,7 @@ nav {
 //--HELP STARTS--
 .help {
     background-color: $color-light-xl;
+
 }
 .help_content {
     padding: 80px 40px 100px 40px;
@@ -361,6 +377,7 @@ nav {
     justify-content: center;
     text-align: center;
 
+
     h3 {
         font-style: normal;
         font-weight: 400;
@@ -368,6 +385,12 @@ nav {
         line-height: 130%;
         letter-spacing: 0.06em;
         color: $color-dark-l;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
@@ -432,6 +455,11 @@ nav {
     justify-content: center;
     gap:20px;
 
+    a {
+        @include reset-a;
+
+    }
+
     h3 {
         font-style: normal;
         font-weight: 400;
@@ -459,6 +487,7 @@ nav {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
 
         .credit_card_icon {
             width: 30px;
@@ -530,8 +559,12 @@ nav {
         }
 
         .footer_item {
-            display: flex;
-            flex-direction: row;
+            
+            a {
+                @include reset-a;
+                display: flex;
+                flex-direction: row;
+            }
 
             .item_icon {
                 width: 40px;
@@ -542,6 +575,7 @@ nav {
                 width: 22px;
             }
             .item_content {
+
                 h4 {
                     font-style: normal;
                     font-weight: 400;

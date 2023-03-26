@@ -5,6 +5,11 @@
         <title>shelter</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/style.css">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/xeniyamv-JSFE2023Q1/shelter/assets/icons/favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/xeniyamv-JSFE2023Q1/shelter/assets/icons/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/xeniyamv-JSFE2023Q1/shelter/assets/icons/favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="/xeniyamv-JSFE2023Q1/shelter/assets/icons/favicon_io/site.webmanifest">
     </head>
     <body>
         <div class="start_screen">
@@ -17,7 +22,7 @@
                 </div>
                 
                 <nav>
-                    <a href="/xeniyamv-JSFE2023Q1/shelter/pages/main/index.html">About the shelter</a>
+                    <a href="/xeniyamv-JSFE2023Q1/shelter/pages/main/index.html" class="here">About the shelter</a>
                     <a href="/xeniyamv-JSFE2023Q1/shelter/pages/pets/index.html">Our pets</a>
                     <a href="#help">Help the shelter</a>
                     <a href="#contacts">Contacts</a>
@@ -31,7 +36,7 @@
                         We offer to give a chance to a little and nice puppy with an extremely wide and open heart. 
                         He or she will love you more than anybody else in the world, you will see!
                     </p>
-                    <button>Make a friend</button>
+                    <button><a href="#pets">Make a friend</a></button>
                 </div>
                 <div class="start_screen_content_img">
                     <img src="/xeniyamv-JSFE2023Q1/shelter/assets/images/start-screen-puppy.svg" alt="puppy">
@@ -108,7 +113,7 @@
                         <button class="circle_button right"></button>
                     </div>
 
-                    <button>Get to know the rest</button>
+                    <button><a href="/xeniyamv-JSFE2023Q1/shelter/pages/pets/index.html">Get to know the rest</a></button>
                 </div>
             </div> <!--Pets ends-->
             
@@ -209,14 +214,16 @@
                     <div class="donation_content_text">
                         <h3>You can also <br> make a donation</h3>
                         <h5>Name of the bank / Type of bank account</h5>
-                        <div class="credit_card">
-                            <div class="credit_card_icon">
-                                <img src="/xeniyamv-JSFE2023Q1/shelter/assets/icons/credit-card.svg" alt="credit card icon">
+                        <a href="##">
+                                <div class="credit_card">
+                                <div class="credit_card_icon">
+                                    <img src="/xeniyamv-JSFE2023Q1/shelter/assets/icons/credit-card.svg" alt="credit card icon">
+                                </div>
+                                <div class="credit_card_number">
+                                    <h4>8380 2880 8028 8791 7435</h4>
+                                </div>
                             </div>
-                            <div class="credit_card_number">
-                                <h4>8380 2880 8028 8791 7435</h4>
-                            </div>
-                        </div>
+                        </a>
                         <p class="add_info">
                             Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                             Maecenas a ipsum at libero sagittis dignissim sed ac diam. 
@@ -243,40 +250,48 @@
             <div class="info">
                 <h3>For questions and suggestions</h3>
                 <div class="footer_item">
-                    <div class="item_icon">
-                        <img src="/xeniyamv-JSFE2023Q1/shelter/assets/icons/mail.svg" alt="mail icon">
-                    </div>
-                    <div class="item_content">
-                        <h4>email@shelter.com</h4>
-                    </div>
+                    <a href="mailto:email@shelter.com">
+                        <div class="item_icon">
+                            <img src="/xeniyamv-JSFE2023Q1/shelter/assets/icons/mail.svg" alt="mail icon">
+                        </div>
+                        <div class="item_content">
+                             <h4>email@shelter.com</h4>
+                        </div>
+                    </a>
                 </div>
                 <div class="footer_item">
-                    <div class="item_icon">
-                        <img src="/xeniyamv-JSFE2023Q1/shelter/assets/icons/icon-phone.svg" alt="phone icon">
-                    </div>
-                    <div class="item_content">
-                        <h4>+13 674 567 75 54</h4>
-                    </div>
+                    <a href="tel:+13 674 567 75 54">
+                        <div class="item_icon">
+                            <img src="/xeniyamv-JSFE2023Q1/shelter/assets/icons/icon-phone.svg" alt="phone icon">
+                        </div>
+                        <div class="item_content">
+                            <h4>+13 674 567 75 54</h4>
+                        </div>
+                    </a>
                 </div>
             </div>
 
             <div class="info">
                 <h3>We are waiting for your visit</h3>
                 <div class="footer_item">
-                    <div class="item_icon location_icon">
-                        <img src="/xeniyamv-JSFE2023Q1/shelter/assets/icons/icon-marker.svg" alt="marker icon">
-                    </div>
-                    <div class="item_content">
-                        <h4>1 Central Street, Boston (entrance from the store)</h4>
-                    </div>
+                    <a href="https://www.google.com/maps/place/25916+Avenue+17,+Madera,+CA+93638/@36.9960561,-120.077975,17z/data=!3m1!4b1!4m6!3m5!1s0x80940950da95aedf:0x3787412e13064a83!8m2!3d36.9960561!4d-120.0757863!16s%2Fg%2F11bw4q5p0h" target="_blank">
+                        <div class="item_icon location_icon">
+                            <img src="/xeniyamv-JSFE2023Q1/shelter/assets/icons/icon-marker.svg" alt="marker icon">
+                        </div>
+                        <div class="item_content">
+                            <h4>1 Central Street, Boston (entrance from the store)</h4>
+                        </div>
+                    </a>
                 </div>
                 <div class="footer_item">
-                    <div class="item_icon location_icon">
-                        <img src="/xeniyamv-JSFE2023Q1/shelter/assets/icons/icon-marker.svg" alt="marker icon">
-                    </div>
-                    <div class="item_content">
-                        <h4>18 South Park, London</h4>
-                    </div>
+                    <a href="https://www.google.com/maps/place/25916+Avenue+17,+Madera,+CA+93638/@36.9960561,-120.077975,17z/data=!3m1!4b1!4m6!3m5!1s0x80940950da95aedf:0x3787412e13064a83!8m2!3d36.9960561!4d-120.0757863!16s%2Fg%2F11bw4q5p0h" target="_blank">
+                        <div class="item_icon location_icon">
+                            <img src="/xeniyamv-JSFE2023Q1/shelter/assets/icons/icon-marker.svg" alt="marker icon">
+                        </div>
+                        <div class="item_content">
+                            <h4>18 South Park, London</h4>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="footer_img">

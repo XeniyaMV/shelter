@@ -157,6 +157,12 @@ nav {
         border-bottom-color: $color-primary;
         border-bottom-width: 3px;
     }
+
+    .here {
+        border-bottom-style: solid;
+        border-bottom-color: $color-primary;
+        border-bottom-width: 3px;
+    }
     
 
 }
@@ -335,8 +341,12 @@ nav {
     }
 
     .footer_item {
-        display: flex;
-        flex-direction: row;
+        
+        a {
+            @include reset-a;
+            display: flex;
+            flex-direction: row;
+        }
 
         .item_icon {
             width: 40px;
@@ -347,6 +357,7 @@ nav {
             width: 22px;
         }
         .item_content {
+
             h4 {
                 font-style: normal;
                 font-weight: 400;
