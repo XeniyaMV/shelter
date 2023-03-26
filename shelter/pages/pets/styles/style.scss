@@ -220,20 +220,20 @@ nav {
         @extend %circle_button;
     }
     .fast_paginator_left {
-        background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/__.svg");
+        background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/fast_pag.svg");
         transform: rotate(180deg);
         &:disabled {
             cursor: default;
-            background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/__(light).svg");
+            background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/fast_pag(light).svg");
             transform: rotate(0deg);
         }
     }
     .paginator_left {
-        background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/_.svg");
+        background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/pag.svg");
         transform: rotate(180deg);
         &:disabled {
             cursor: default;
-            background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/_(light).svg");
+            background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/pag(light).svg");
             transform: rotate(0deg);
         }
     }
@@ -241,17 +241,17 @@ nav {
         background-color: $color-primary;
     }
     .paginator_right {
-        background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/_.svg");
+        background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/pag.svg");
         &:disabled {
             cursor: default;
-            background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/__(light).svg");
+            background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/pag(light).svg");
         }
     }
     .fast_paginator_right {
-        background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/__.svg");
+        background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/fast_pag.svg");
         &:disabled {
             cursor: default;
-            background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/_(light).svg");
+            background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/fast_pag(light).svg");
         }
     }
     @media screen and (min-width: 1280px) {

@@ -179,39 +179,39 @@ nav .here:hover {
   gap: 20px;
 }
 .pets_content .fast_paginator_left {
-  background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/__.svg");
+  background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/fast_pag.svg");
   transform: rotate(180deg);
 }
 .pets_content .fast_paginator_left:disabled {
   cursor: default;
-  background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/__(light).svg");
+  background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/fast_pag(light).svg");
   transform: rotate(0deg);
 }
 .pets_content .paginator_left {
-  background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/_.svg");
+  background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/pag.svg");
   transform: rotate(180deg);
 }
 .pets_content .paginator_left:disabled {
   cursor: default;
-  background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/_(light).svg");
+  background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/pag(light).svg");
   transform: rotate(0deg);
 }
 .pets_content .scroll_number_page {
   background-color: #F1CDB3;
 }
 .pets_content .paginator_right {
-  background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/_.svg");
+  background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/pag.svg");
 }
 .pets_content .paginator_right:disabled {
   cursor: default;
-  background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/__(light).svg");
+  background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/pag(light).svg");
 }
 .pets_content .fast_paginator_right {
-  background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/__.svg");
+  background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/fast_pag.svg");
 }
 .pets_content .fast_paginator_right:disabled {
   cursor: default;
-  background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/_(light).svg");
+  background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/fast_pag(light).svg");
 }
 @media screen and (min-width: 1280px) {
   .pets_content {
