@@ -52,7 +52,7 @@ body {
 }
 
 .start_screen {
-  height: 908px;
+  height: 910px;
 }
 @media screen and (min-width: 1280px) {
   .start_screen {
@@ -80,6 +80,7 @@ header a {
   text-align: center;
 }
 .logo a .logo_title {
+  margin-bottom: 10px;
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
@@ -148,16 +149,17 @@ nav .here:hover {
 }
 
 .start_screen_content {
+  height: 728px;
   margin-top: 90px;
   margin-left: 40px;
   margin-right: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 }
 
 .start_screen_content_text {
+  margin-top: 162px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -182,6 +184,8 @@ nav .here:hover {
 }
 .start_screen_content_img {
   width: 698px;
+  height: 728px;
+  align-self: flex-end;
 }
 
 .about {
@@ -194,7 +198,7 @@ nav .here:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 120px;
+  column-gap: 120px;
 }
 
 .about_content_img {
@@ -241,7 +245,7 @@ nav .here:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  row-gap: 60px;
 }
 .pets_content h3 {
   font-style: normal;
@@ -268,7 +272,7 @@ nav .here:hover {
   margin-left: 53px;
   margin-right: 53px;
   display: flex;
-  gap: 90px;
+  column-gap: 90px;
 }
 
 .pet_card {
@@ -445,9 +449,8 @@ nav .here:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   padding: 40px 40px 0px 40px;
-  gap: 160px;
+  column-gap: 158px;
 }
 @media screen and (min-width: 1280px) {
   .footer {
@@ -459,9 +462,11 @@ nav .here:hover {
 
 .footer_img {
   align-self: flex-end;
+  height: 310px;
 }
 
 .info {
+  margin-top: 16px;
   height: 234px;
   display: flex;
   flex-direction: column;
@@ -480,6 +485,7 @@ nav .here:hover {
   color: black;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .info .footer_item a:hover .item_content h4 {
   color: #FAFAFA;

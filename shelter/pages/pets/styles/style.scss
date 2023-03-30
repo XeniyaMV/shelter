@@ -120,13 +120,15 @@ header {
     text-align: center;
     a{
         .logo_title {
-                font-style: normal;
-                font-weight: 400;
-                font-size: 32px;
-                color: $color-dark-l;
-                line-height: 110%;
-                letter-spacing: 0.06em;
-                text-align: center;
+            margin-bottom: 10px;
+
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            color: $color-dark-l;
+            line-height: 110%;
+            letter-spacing: 0.06em;
+            text-align: center;
         }
 
         .logo_subtitle {
@@ -320,10 +322,9 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 
     padding: 40px 40px 0px 40px;
-    gap: 160px;
+    column-gap: 158px;
 
     @media screen and (min-width: 1280px) {
         width: 1280px;
@@ -334,9 +335,12 @@ nav {
 
 .footer_img {
     align-self: flex-end;
+    height: 310px;
+
 }
 
 .info {
+    margin-top: 16px;
     height: 234px;
     display: flex;
     flex-direction: column;
@@ -357,6 +361,7 @@ nav {
             @include reset-a;
             display: flex;
             flex-direction: row;
+            align-items: center;
 
             &:hover {
                 .item_content {
