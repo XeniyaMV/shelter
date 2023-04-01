@@ -72,6 +72,11 @@ header a {
     margin-right: auto;
   }
 }
+@media screen and (min-width: 450px) and (max-width: 1100px) {
+  header {
+    padding: 30px 30px;
+  }
+}
 
 .logo {
   width: 186px;
@@ -154,6 +159,11 @@ nav .here:hover {
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 450px) and (max-width: 1100px) {
+  .pets_slider {
+    margin-bottom: 10px;
+  }
+}
 
 .pets_content {
   padding: 80px 40px 100px 40px;
@@ -162,7 +172,7 @@ nav .here:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 45px;
+  row-gap: 45px;
 }
 .pets_content h3 {
   font-style: normal;
@@ -221,6 +231,12 @@ nav .here:hover {
     margin-right: auto;
   }
 }
+@media screen and (min-width: 450px) and (max-width: 1100px) {
+  .pets_content {
+    padding: 80px 30px 70px 30px;
+    row-gap: 30px;
+  }
+}
 
 .slider_content {
   display: flex;
@@ -228,6 +244,8 @@ nav .here:hover {
   justify-content: center;
   column-gap: 40px;
   row-gap: 30px;
+  max-height: 1365px;
+  overflow: hidden;
 }
 
 .pet_card {
@@ -276,20 +294,76 @@ nav .here:hover {
     margin-right: auto;
   }
 }
+@media screen and (min-width: 1101px) and (max-width: 1279px) {
+  .footer {
+    column-gap: 2vw;
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 1100px) {
+  .footer {
+    padding: 30px 30px 0px 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 65px;
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 1100px) and (max-width: 980px) {
+  .footer {
+    column-gap: 10vw;
+  }
+}
+
+.info_wrapper {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 155px;
+}
+@media screen and (min-width: 450px) and (max-width: 1100px) {
+  .info_wrapper {
+    width: calc(100vw - 60px);
+    column-gap: 0px;
+    justify-content: space-around;
+  }
+}
 
 .footer_img {
+  max-height: 310px;
   align-self: flex-end;
-  height: 310px;
+  flex-shrink: 1;
+}
+@media screen and (min-width: 1101px) and (max-width: 1279px) {
+  .footer_img {
+    display: flex;
+    align-items: flex-end;
+  }
+  .footer_img img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 1100px) {
+  .footer_img {
+    display: flex;
+    align-items: flex-end;
+  }
+  .footer_img img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .info {
   margin-top: 16px;
+  min-width: 280px;
+  max-width: 320px;
   height: 234px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-shrink: 2;
 }
 .info h3 {
+  max-width: 279px;
   font-style: normal;
   font-weight: 400;
   font-size: 35px;
@@ -323,6 +397,11 @@ nav .here:hover {
   letter-spacing: 0.06em;
   color: #F1CDB3;
   transition: color 0.5s;
+}
+@media screen and (min-width: 450px) and (max-width: 1100px) {
+  .info {
+    margin-top: 0px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
