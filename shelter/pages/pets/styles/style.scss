@@ -116,6 +116,10 @@ header {
     @media screen and (min-width:450px) and (max-width:1100px) {
         padding: 30px 30px;
     }
+
+    @media screen and (max-width:449px){
+        padding: 30px 20px;
+    }
     
 }
 
@@ -155,6 +159,10 @@ nav {
     align-items: center;
     a {
         @include nav-a-default;
+
+        @media screen and (max-width:714px) {
+            display: none;
+        }
     }
     
     a:hover {
@@ -180,6 +188,17 @@ nav {
         }
     }
     
+    .burger {
+        display: none;
+
+        @media screen and (max-width:714px) {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width:714px) {
+        width: 30px;
+    }
 
 }
 // -- HEADER ENDS --
@@ -217,6 +236,10 @@ nav {
         letter-spacing: 0.06em;
         color: $color-dark-l;
 
+        @media screen and (max-width: 640px) {
+            font-size: 25px;
+        }
+
     }
 
     button {
@@ -225,7 +248,23 @@ nav {
     }
     .slider_buttons {
         display: flex;
-        gap: 20px
+        gap: 20px;
+
+        @media screen and (max-width: 640px) {
+            gap: 0px;
+            justify-content: space-between;
+            width: 60vw;
+        }
+
+        @media screen and (max-width: 550px){
+            width: 70vw;
+        }
+
+        @media screen and (max-width: 420px) {
+            width: 93.75vw;
+        }
+
+
     }
     .circle_button{
         @extend %circle_button;
@@ -271,9 +310,13 @@ nav {
         margin-right: auto;
     }
 
-    @media screen and (min-width:450px) and (max-width:1100px) {
+    @media screen and (min-width:640px) and (max-width:1100px) {
         padding: 80px 30px 70px 30px;
         row-gap: 30px;
+    }
+    @media screen and (max-width: 640px) {
+        padding: 42px 10px;
+        row-gap: 42px;
     }
 }
 .slider_content {
@@ -353,27 +396,41 @@ nav {
         column-gap: 2vw;
     }
 
-    @media screen and (min-width:450px) and (max-width:1100px) {
+    @media screen and (max-width:1100px) {
         padding: 30px 30px 0px 30px;
         flex-wrap:wrap;
         justify-content: center;
         row-gap: 65px;
 
-        @media screen and (max-width: 980px) {
+        @media screen and (max-width:980px) {
             column-gap: 10vw;
         }
 
     }
+
+    @media screen and (max-width:700px) {
+        padding: 30px 10px 0px 10px;
+        row-gap: 40px;
+    }
+
+
 }
 .info_wrapper {
     display: flex;
     justify-content: space-between;
     column-gap: 155px;
 
-    @media screen and (min-width:450px) and (max-width:1100px) {
+    @media screen and (max-width:1100px) {
         width: calc(100vw - 60px);
         column-gap: 0px;
         justify-content: space-around;            
+    }
+
+    @media screen and (max-width:700px) {
+        flex-wrap: wrap;
+        width: calc(100vw - 20px);
+        row-gap: 40px;
+
     }
 }
 .footer_img {
@@ -392,7 +449,7 @@ nav {
         }
     }
 
-    @media screen and (min-width:450px) and (max-width:1100px) {
+    @media screen and (max-width:1100px) {
 
         display: flex;
         align-items: flex-end;
@@ -401,6 +458,17 @@ nav {
             width: 100%;
             height: auto;
         }
+    }
+
+    @media screen and (max-width: 700px) {
+        width: 43vw;
+        min-width: 275px;
+
+    }
+
+    @media  screen and (max-width: 400px) {
+        width: 81.25vw;
+        min-width: 260px;
     }
 
 }
@@ -423,6 +491,12 @@ nav {
         line-height: 130%;
         letter-spacing: 0.06em;
         color: $color-light-xl;
+
+        @media screen and (max-width: 700px) {
+            text-align: center;
+            max-width: 100%;
+            font-size: 25px;
+        }
     }
 
     .footer_item {
@@ -464,8 +538,26 @@ nav {
         }
     }
 
-    @media screen and (min-width:450px) and (max-width:1100px) {
+    @media screen  and (max-width:1100px) {
         margin-top: 0px;
+    }
+
+    @media screen and (max-width:700px) {
+        min-width: 100%;
+        max-width: 100%;
+        align-items: center;
+        row-gap: 40px;
+        height: auto;
+    }
+    &.location {
+        @media screen and (max-width:700px) {
+            h3 {
+                align-self: center;
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+            align-items: flex-start;
+        }
     }
 }
 //--FOOTER ENDS--
