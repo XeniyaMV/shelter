@@ -16,20 +16,21 @@ body {
 }
 
 .pet_card button, .pets_content button {
-  padding: 15px 45px;
+  padding: 15px 42px;
   width: 207px;
   height: 52px;
   background-color: #F1CDB3;
   border-color: #F1CDB3;
   border-radius: 100px;
   transition: background-color 0.5s;
-  cursor: pointer;
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
   line-height: 130%;
+  letter-spacing: 0.06em;
   color: #292929;
   border: 2px solid #F1CDB3;
+  cursor: pointer;
 }
 .pet_card button:hover, .pets_content button:hover {
   background-color: #FDDCC4;
@@ -182,9 +183,19 @@ nav .burger {
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 450px) and (max-width: 1100px) {
+@media screen and (min-width: 951px) {
+  .pets_slider {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 950px) {
   .pets_slider {
     margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .pets_slider {
+    margin-bottom: 0px;
   }
 }
 
@@ -278,7 +289,7 @@ nav .burger {
 }
 @media screen and (min-width: 640px) and (max-width: 1100px) {
   .pets_content {
-    padding: 80px 30px 70px 30px;
+    padding: 80px 30px 76px 30px;
     row-gap: 30px;
   }
 }
@@ -297,6 +308,12 @@ nav .burger {
   row-gap: 30px;
   max-height: 1365px;
   overflow: hidden;
+  margin-top: 15px;
+}
+@media screen and (max-width: 950px) {
+  .slider_content {
+    margin-top: 0px;
+  }
 }
 
 .pet_card {
@@ -316,6 +333,7 @@ nav .burger {
   font-weight: 400;
   font-size: 20px;
   line-height: 23px;
+  letter-spacing: 0.06em;
 }
 .pet_card button {
   width: 187px;
@@ -375,11 +393,20 @@ nav .burger {
   justify-content: space-between;
   column-gap: 155px;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (min-width: 800px) and (max-width: 1100px) {
   .info_wrapper {
     width: calc(100vw - 60px);
     column-gap: 0px;
     justify-content: space-around;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 799px) {
+  .info_wrapper {
+    width: calc(100vw - 60px);
+    column-gap: 0px;
+    justify-content: space-between;
+    padding-left: 32px;
+    padding-right: 18px;
   }
 }
 @media screen and (max-width: 700px) {

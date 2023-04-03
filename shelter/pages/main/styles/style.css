@@ -16,7 +16,7 @@ body {
 }
 
 .pet_card button, .pets_content button, .start_screen_content_text button {
-  padding: 15px 45px;
+  padding: 15px 42px;
   width: 207px;
   height: 52px;
   background-color: #F1CDB3;
@@ -27,6 +27,7 @@ body {
   font-weight: 400;
   font-size: 17px;
   line-height: 130%;
+  letter-spacing: 0.06em;
   color: #292929;
   border: 2px solid #F1CDB3;
   cursor: pointer;
@@ -68,7 +69,7 @@ body {
 }
 @media screen and (max-width: 400px) {
   .start_screen {
-    max-height: 823px;
+    max-height: 825px;
   }
 }
 
@@ -411,6 +412,7 @@ nav .burger {
   font-weight: 400;
   font-size: 35px;
   line-height: 130%;
+  letter-spacing: 0.06em;
   color: #545454;
 }
 @media screen and (max-width: 610px) {
@@ -561,6 +563,7 @@ nav .burger {
   font-weight: 400;
   font-size: 20px;
   line-height: 23px;
+  letter-spacing: 0.06em;
 }
 .pet_card button {
   width: 187px;
@@ -595,7 +598,7 @@ nav .burger {
   letter-spacing: 0.06em;
   color: #545454;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .help_content h3 {
     font-size: 25px;
   }
@@ -613,7 +616,7 @@ nav .burger {
     padding-right: 69px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .help_content {
     padding: 42px 15px;
   }
@@ -639,7 +642,7 @@ nav .burger {
     margin: 60px 0px 0px 0px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .help_list {
     max-width: 570px;
     gap: 30px;
@@ -676,6 +679,10 @@ nav .burger {
     width: 50px;
     height: 50px;
     margin-bottom: 20px;
+  }
+  .help_list_item .item_icon img {
+    width: 100%;
+    height: auto;
   }
 }
 .help_list_item h4.item_content {
@@ -729,14 +736,13 @@ nav .burger {
     column-gap: 1vw;
   }
 }
-@media screen and (min-width: 450px) and (max-width: 1100px) {
+@media screen and (min-width: 760px) and (max-width: 1100px) {
   .donation_content {
     flex-direction: column-reverse;
     row-gap: 60px;
-    padding: 42px 10px;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 760px) {
   .donation_content {
     flex-direction: column-reverse;
     row-gap: 42px;
@@ -806,12 +812,15 @@ nav .burger {
   font-weight: 400;
   font-size: 15px;
   line-height: 110%;
+  letter-spacing: 0.06em;
   color: #545454;
 }
 @media screen and (max-width: 700px) {
   .donation_content_text h5 {
+    font-size: 15px;
     line-height: 160%;
     text-align: center;
+    letter-spacing: normal;
   }
 }
 .donation_content_text .credit_card {
@@ -865,6 +874,8 @@ nav .burger {
   .donation_content_text .credit_card {
     width: 50vw;
     min-width: 281px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media screen and (max-width: 283px) {
@@ -944,11 +955,20 @@ nav .burger {
   justify-content: space-between;
   column-gap: 155px;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (min-width: 800px) and (max-width: 1100px) {
   .info_wrapper {
     width: calc(100vw - 60px);
     column-gap: 0px;
     justify-content: space-around;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 799px) {
+  .info_wrapper {
+    width: calc(100vw - 60px);
+    column-gap: 0px;
+    justify-content: space-between;
+    padding-left: 32px;
+    padding-right: 18px;
   }
 }
 @media screen and (max-width: 700px) {

@@ -45,7 +45,7 @@ body {
 }
 
 %button {
-    padding: 15px 45px;
+    padding: 15px 42px;
     width: 207px;
     height: 52px;
     background-color: $color-primary;
@@ -53,21 +53,21 @@ body {
     border-radius: 100px;
     transition: background-color 0.5s;
 
-    cursor: pointer;
-
 
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
     line-height: 130%;
+    letter-spacing: 0.06em;
 
     color: $color-dark-3xl;
     border: 2px solid $color-primary;
 
+    cursor: pointer;
+
     &:hover {
         background-color: $color-primary-light;
         border: 2px solid $color-primary-light;
-        
     }
 }
 
@@ -214,9 +214,18 @@ nav {
     justify-content: center;
     align-items: center;
 
-    @media screen and (min-width:450px) and (max-width:1100px) {
+    @media screen and (min-width:951px) {
+        margin-bottom: 15px;;
+    }
+    
+    @media screen and (max-width:950px) {
         margin-bottom: 10px;
     }
+
+    @media screen and (max-width:400px) {
+        margin-bottom: 0px;
+    }
+
 
 }
 .pets_content {
@@ -311,7 +320,7 @@ nav {
     }
 
     @media screen and (min-width:640px) and (max-width:1100px) {
-        padding: 80px 30px 70px 30px;
+        padding: 80px 30px 76px 30px;
         row-gap: 30px;
     }
     @media screen and (max-width: 640px) {
@@ -328,8 +337,11 @@ nav {
     row-gap: 30px;
     max-height: 1365px;
     overflow: hidden;
+    margin-top: 15px;
 
-    
+    @media screen and (max-width:950px) {
+        margin-top: 0px;
+    }
 
 }
 .pet_card {
@@ -351,6 +363,7 @@ nav {
         font-weight: 400;
         font-size: 20px;
         line-height: 23px;
+        letter-spacing: 0.06em;
     }
 
     button {
@@ -375,6 +388,7 @@ nav {
 
 
 //--FOOTER STARTS--
+
 
 .footer {
     height: 350px;
@@ -420,10 +434,20 @@ nav {
     justify-content: space-between;
     column-gap: 155px;
 
-    @media screen and (max-width:1100px) {
+    @media screen and (min-width: 800px) and (max-width:1100px) {
         width: calc(100vw - 60px);
         column-gap: 0px;
-        justify-content: space-around;            
+        justify-content: space-around;   
+        // padding-left: 32px;
+        // padding-right: 18px;         
+    }
+
+    @media screen  and (min-width: 701px) and (max-width:799px){
+        width: calc(100vw - 60px);
+        column-gap: 0px;
+        justify-content: space-between;   
+        padding-left: 32px;
+        padding-right: 18px; 
     }
 
     @media screen and (max-width:700px) {
