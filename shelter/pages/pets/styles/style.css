@@ -367,13 +367,14 @@ nav.small_screen {
   justify-content: center;
   column-gap: 40px;
   row-gap: 30px;
-  max-height: 1365px;
+  max-height: 930px;
   overflow: hidden;
   margin-top: 15px;
 }
 @media screen and (max-width: 950px) {
   .slider_content {
     margin-top: 0px;
+    max-height: 1365px;
   }
 }
 
@@ -574,12 +575,17 @@ nav.small_screen {
     height: 321px;
     overflow: scroll;
     overflow-x: hidden;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
   .clicked_card .pet_info p {
     text-align: justify;
   }
   .clicked_card .pet_info ul {
     margin-top: 4px;
+  }
+  .clicked_card .pet_info::-webkit-scrollbar {
+    display: none;
   }
 }
 

@@ -403,12 +403,13 @@ nav {
     justify-content: center;
     column-gap: 40px;
     row-gap: 30px;
-    max-height: 1365px;
+    max-height: 930px;
     overflow: hidden;
     margin-top: 15px;
 
     @media screen and (max-width:950px) {
         margin-top: 0px;
+        max-height: 1365px;
     }
 
 }

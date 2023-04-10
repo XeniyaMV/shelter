@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     
 
-        function getPetCard(petInfo) {
+        function getPetCard(petInfo, i) {
             let divPetCard = document.createElement('div');
             let divPetImg = document.createElement('div');
             let petImg = document.createElement('img');
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
             divPetCard.append(divPetImg);
             divPetCard.append(p);
             divPetCard.append(button);
-
+            divPetCard.style.order = i+1;
             divPetCard.addEventListener('click', function() {
                 const petsContainer = document.querySelector('.pets');
                 const sliderContainer = document.querySelector('.slider_content');
@@ -170,15 +170,57 @@ document.addEventListener('DOMContentLoaded', function () {
             return divPetCard;
         }
 
+        function getSample(n, k) {
+            let arrN = [];
+            let res = [];
+            for (let i = 0; i < n; i++) {
+                arrN.push(i);
+            }
+    
+            for (let i = 0; i < k; i++) {
+                let index = Math.floor(Math.random()*arrN.length);
+                res.push(arrN[index]);
+                arrN.splice(index, 1);
+            }
+            return res;
+        }
         async function setPaginator(jsonPath) {
             const response = await fetch(jsonPath);
             const resJSON = await response.json();
-            let paginatorContainer = document.querySelector('.slider_content');
-
-            for (let item of resJSON) {
-                let petCard = getPetCard(item);
+            const paginatorContainer = document.querySelector('.slider_content');
+            const pagRight = document.querySelector('.paginator_right');
+            let cardsIndexes = [];
+            let cards = [];
+            let pageNumber = 0;
+            for (let i = 0; i < 6; i++) {
+                cardsIndexes =  cardsIndexes.concat(getSample(resJSON.length, resJSON.length));
+            }
+            console.log(cardsIndexes);
+            // for (let item of cardsIndexes) {
+            for (let i = 0; i < cardsIndexes.length; i++) {
+                let petCard = getPetCard(resJSON[cardsIndexes[i]], i);
+                cards.push(petCard);
                 paginatorContainer.append(petCard);
             }
+
+            let flag = 0;
+            pagRight.addEventListener('click', function() {
+                pageNumber += 1;
+                for (let i = 0; i < cards.length; i++)
+                {
+                    if (Math.floor(i/8) == pageNumber) {
+                        cards[i].style.order = (i - pageNumber*8) + 1;
+                        cards[(i - 8)].style.order = i + 1;
+                        flag = i;
+                    }
+                }
+                if (flag <= cards.length - 1) {
+                    if (flag == cards.length - 1) {
+                        flag+=1;
+                    }
+                    pagRight.previousElementSibling.textContent = pageNumber+1;
+                }
+            })
         }
 
         setPaginator('/xeniyamv-JSFE2023Q1/shelter/assets/pets_description.json');
