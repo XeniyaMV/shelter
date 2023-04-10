@@ -509,7 +509,6 @@ nav {
         display: flex;
         flex-direction: column;
         row-gap: 40px;
-        overflow: scroll;
         .title {
             display: flex;
             flex-direction: column;
@@ -616,12 +615,21 @@ nav {
             padding: 0px;
             width: 220px;
             height: 321px;
+            overflow: scroll;
+            overflow-x: hidden;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+
             p {
                 text-align: justify;
             }
             ul {
                 margin-top: 4px;
             }
+        }
+
+        .pet_info::-webkit-scrollbar {
+            display: none;
         }
     }
 }

@@ -467,7 +467,6 @@ nav.small_screen {
   display: flex;
   flex-direction: column;
   row-gap: 40px;
-  overflow: scroll;
 }
 .clicked_card .pet_info .title {
   display: flex;
@@ -573,6 +572,8 @@ nav.small_screen {
     padding: 0px;
     width: 220px;
     height: 321px;
+    overflow: scroll;
+    overflow-x: hidden;
   }
   .clicked_card .pet_info p {
     text-align: justify;
