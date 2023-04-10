@@ -202,7 +202,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 cards.push(petCard);
                 paginatorContainer.append(petCard);
             }
-
             let flag = 0;
             pagRight.addEventListener('click', function() {
                 pageNumber += 1;
@@ -214,6 +213,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         flag = i;
                     }
                 }
+
                 if (flag <= cards.length - 1) {
                     if (flag == cards.length - 1) {
                         flag+=1;
