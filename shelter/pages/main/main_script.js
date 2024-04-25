@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     <button class="circle_button" > x </button>
     //     <div class="clicked_card">
     //        <div class="pet_img">
-    //            <img src="/xeniyamv-JSFE2023Q1/shelter/assets/images/pets-sophia.svg" alt="Sophia">
+    //            <img src="/shelter/assets/images/pets-sophia.svg" alt="Sophia">
     //        </div>
     //        <div class="pet_info">
     //            <div class="title">
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function getMobilePetCard(petInfo) {
         let divPetCardContainer = document.createElement('div');
         let innerText = `
-        <button class="circle_button"> <img src="/xeniyamv-JSFE2023Q1/shelter/assets/icons/Vector.svg" alt="x"> </button>
+        <button class="circle_button"> <img src="/shelter/assets/icons/Vector.svg" alt="x"> </button>
         <div class="clicked_card">
             <div class="pet_img">
                <img src="${petInfo.img}" alt="${petInfo.name}">
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // <div class="pet_card">
     //    <div class="pet_img">
-    //        <img src="/xeniyamv-JSFE2023Q1/shelter/assets/images/pets-sophia.svg" alt="Sophia">
+    //        <img src="/shelter/assets/images/pets-sophia.svg" alt="Sophia">
     //    </div>
     //    <p class="pet_name"> Sophia </p>
     //    <button>Learn more</button>
@@ -388,7 +388,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
     
-    setSlider('/xeniyamv-JSFE2023Q1/shelter/assets/pets_description.json');
+    setSlider('/shelter/assets/pets_description.json');
 
 
 

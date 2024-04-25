@@ -24,7 +24,7 @@ html, body {
     scroll-behavior: smooth;
 }
 body {
-    background: url(/xeniyamv-JSFE2023Q1/shelter/assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%) fixed; 
+    background: url(/shelter/assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%) fixed; 
 
 }
 body.active {
@@ -347,20 +347,20 @@ nav {
         @extend %circle_button;
     }
     .fast_paginator_left {
-        background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/fast_pag.svg");
+        background-image: url("/shelter/assets/icons/fast_pag.svg");
         transform: rotate(180deg);
         &:disabled {
             cursor: default;
-            background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/fast_pag(light).svg");
+            background-image: url("/shelter/assets/icons/fast_pag(light).svg");
             transform: rotate(0deg);
         }
     }
     .paginator_left {
-        background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/pag.svg");
+        background-image: url("/shelter/assets/icons/pag.svg");
         transform: rotate(180deg);
         &:disabled {
             cursor: default;
-            background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/pag(light).svg");
+            background-image: url("/shelter/assets/icons/pag(light).svg");
             transform: rotate(0deg);
         }
     }
@@ -368,17 +368,17 @@ nav {
         background-color: $color-primary;
     }
     .paginator_right {
-        background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/pag.svg");
+        background-image: url("/shelter/assets/icons/pag.svg");
         &:disabled {
             cursor: default;
-            background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/pag(light).svg");
+            background-image: url("/shelter/assets/icons/pag(light).svg");
         }
     }
     .fast_paginator_right {
-        background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/fast_pag.svg");
+        background-image: url("/shelter/assets/icons/fast_pag.svg");
         &:disabled {
             cursor: default;
-            background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/fast_pag(light).svg");
+            background-image: url("/shelter/assets/icons/fast_pag(light).svg");
         }
     }
     @media screen and (min-width: 1280px) {

@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
         function getMobilePetCard(petInfo) {
             let divPetCardContainer = document.createElement('div');
             let innerText = `
-            <button class="circle_button"> <img src="/xeniyamv-JSFE2023Q1/shelter/assets/icons/Vector.svg" alt="x"> </button>
+            <button class="circle_button"> <img src="/shelter/assets/icons/Vector.svg" alt="x"> </button>
             <div class="clicked_card">
                 <div class="pet_img">
                    <img src="${petInfo.img}" alt="${petInfo.name}">
@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function () {
             })
         }
 
-        setPaginator('/xeniyamv-JSFE2023Q1/shelter/assets/pets_description.json');
+        setPaginator('/shelter/assets/pets_description.json');
 
 
 })
