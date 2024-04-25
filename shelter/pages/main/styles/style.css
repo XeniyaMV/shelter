@@ -13,7 +13,7 @@ html, body {
 }
 
 body {
-  background: url(/xeniyamv-JSFE2023Q1/shelter/assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%) fixed;
+  background: url(/shelter/assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%) fixed;
 }
 
 body.active {
@@ -579,7 +579,7 @@ nav.small_screen {
   width: 260px;
 }
 .pets_content .left {
-  background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/Arrow.svg");
+  background-image: url("/shelter/assets/icons/Arrow.svg");
   grid-area: left;
 }
 @media screen and (max-width: 683px) {
@@ -588,7 +588,7 @@ nav.small_screen {
   }
 }
 .pets_content .right {
-  background-image: url("/xeniyamv-JSFE2023Q1/shelter/assets/icons/Arrow.svg");
+  background-image: url("/shelter/assets/icons/Arrow.svg");
   transform: rotate(180deg);
   grid-area: right;
 }
