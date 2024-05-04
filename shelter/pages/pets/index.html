@@ -1,144 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>shelter</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles/style.css">
+  <head>
+    <meta charset="UTF-8">
+    <title>shelter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/style.css">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="/shelter/assets/icons/favicon_io/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/shelter/assets/icons/favicon_io/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/shelter/assets/icons/favicon_io/favicon-16x16.png">
-        <link rel="manifest" href="/shelter/assets/icons/favicon_io/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/shelter/assets/icons/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/shelter/assets/icons/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/shelter/assets/icons/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/shelter/assets/icons/favicon_io/site.webmanifest">
 
-        <script type="text/javascript" src="/shelter/pages/main/index.js"></script>
-        <script type="text/javascript" src="/shelter/assets/pets_description.json"></script>
-        <script type="text/javascript" src="/shelter/pages/pets/pets_script.js"></script>
-    </head>
-    <body>
-        <div class="start_screen">
-            <header>
-                <div class="logo">
-                    <a href="/shelter/index.html">
-                        <h1 class="logo_title">Cozy House</h1>
-                        <span class="logo_subtitle">Shelter for pets in Boston</span>
-                    </a>
-                </div>
-                
-                <div class="menu">
-                    <div class="burger"><img src="/shelter/assets/icons/burger.svg" alt="burger icon"></div>
-                    
-                    <nav>
-                        <a href="/shelter/index.html" >About the shelter</a>
-                        <a href="#pets" class="here">Our pets</a>
-                        <a href="/shelter/index.html#help">Help the shelter</a>
-                        <a href="#contacts">Contacts</a>
-                    </nav>
+    <script type="text/javascript" src="/shelter/pages/main/index.js"></script>
+    <script type="text/javascript" src="/shelter/assets/pets_description.json"></script>
+    <script type="text/javascript" src="/shelter/pages/pets/pets_script.js"></script>
+  </head>
+  <body>
+    <div class="start_screen">
+      <header>
+        <div class="logo">
+          <a href="/shelter/index.html">
+            <h1 class="logo_title">Cozy House</h1>
+            <span class="logo_subtitle">Shelter for pets in Boston</span>
+          </a>
+        </div>
 
-                </div>
+        <div class="menu">
+          <div class="burger"><img src="/shelter/assets/icons/burger.svg" alt="burger icon"></div>
+            <nav>
+              <a href="/shelter/index.html" >About the shelter</a>
+              <a href="#pets" class="here">Our pets</a>
+              <a href="/shelter/index.html#help">Help the shelter</a>
+              <a href="#contacts">Contacts</a>
+            </nav>
+        </div>
+      </header>
+    </div> <!-- START SCREEN ENDS -->
 
-            </header>
+    <div class="main">
+      <div class="pets" id="pets">
+        <div class="pets_content">
+          <h3>Our friends who <br> are looking for a house</h3>
 
-        </div> <!-- START SCREEN ENDS -->
-        
-        
-        
-        
-        <div class="main">
+          <div class="pets_slider">
+            <div class="slider_content"></div>
+          </div>
 
-            
-            <div class="pets" id="pets">
-                <div class="pets_content">
-                    <h3>Our friends who <br> are looking for a house</h3>
+          <div class="slider_buttons">
+            <button class="circle_button fast_paginator_left" disabled></button>
+            <button class="circle_button paginator_left" disabled></button>
+            <button class="circle_button scroll_number_page">1</button>
+            <button class="circle_button paginator_right"></button>
+            <button class="circle_button fast_paginator_right"></button>
+          </div>
+        </div>
+      </div> <!--Pets ends-->
+    </div> <!-- MAIN ENDS -->
 
-                    <div class="pets_slider">
-                        <div class="slider_content">
-                          
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="slider_buttons">
-                        <button class="circle_button fast_paginator_left" disabled></button>
-                        <button class="circle_button paginator_left" disabled></button>
-                        <button class="circle_button scroll_number_page">1</button>
-                        <button class="circle_button paginator_right"></button>
-                        <button class="circle_button fast_paginator_right"></button>
-                    </div>
-                </div>
-            </div> <!--Pets ends-->
-            
+    <footer class="footer" id="contacts">
+      <div class="info_wrapper">
+        <div class="info">
+          <h3>For questions and suggestions</h3>
+          <div class="footer_item">
+            <a href="mailto:email@shelter.com">
+              <div class="item_icon">
+                <img src="/shelter/assets/icons/mail.svg" alt="mail icon">
+              </div>
+              <div class="item_content">
+                <h4>email@shelter.com</h4>
+              </div>
+            </a>
+          </div>
+          <div class="footer_item">
+            <a href="tel:+136745677554">
+              <div class="item_icon">
+                <img src="/shelter/assets/icons/icon-phone.svg" alt="phone icon">
+              </div>
+              <div class="item_content">
+                <h4>+13 674 567 75 54</h4>
+              </div>
+            </a>
+          </div>
+        </div>
 
+        <div class="info location">
+          <h3>We are waiting for your visit</h3>
+          <div class="footer_item">
+            <a href="https://www.google.com/maps/place/25916+Avenue+17,+Madera,+CA+93638/@36.9960561,-120.077975,17z/data=!3m1!4b1!4m6!3m5!1s0x80940950da95aedf:0x3787412e13064a83!8m2!3d36.9960561!4d-120.0757863!16s%2Fg%2F11bw4q5p0h" target="_blank">
+              <div class="item_icon location_icon">
+                <img src="/shelter/assets/icons/icon-marker.svg" alt="marker icon">
+              </div>
+              <div class="item_content">
+                <h4>1 Central Street, Boston (entrance from the store)</h4>
+              </div>
+            </a>
+          </div>
+          <div class="footer_item">
+            <a href="https://www.google.com/maps/place/25916+Avenue+17,+Madera,+CA+93638/@36.9960561,-120.077975,17z/data=!3m1!4b1!4m6!3m5!1s0x80940950da95aedf:0x3787412e13064a83!8m2!3d36.9960561!4d-120.0757863!16s%2Fg%2F11bw4q5p0h" target="_blank">
+              <div class="item_icon location_icon">
+                <img src="/shelter/assets/icons/icon-marker.svg" alt="marker icon">
+              </div>
+              <div class="item_content">
+                <h4>18 South Park, London</h4>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
 
-        </div> <!-- MAIN ENDS -->
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <footer class="footer" id="contacts">
-            <div class="info_wrapper">
-                <div class="info">
-                    <h3>For questions and suggestions</h3>
-                    <div class="footer_item">
-                        <a href="mailto:email@shelter.com">
-                            <div class="item_icon">
-                                <img src="/shelter/assets/icons/mail.svg" alt="mail icon">
-                            </div>
-                            <div class="item_content">
-                                 <h4>email@shelter.com</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="footer_item">
-                        <a href="tel:+136745677554">
-                            <div class="item_icon">
-                                <img src="/shelter/assets/icons/icon-phone.svg" alt="phone icon">
-                            </div>
-                            <div class="item_content">
-                                <h4>+13 674 567 75 54</h4>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-    
-                <div class="info location">
-                    <h3>We are waiting for your visit</h3>
-                    <div class="footer_item">
-                        <a href="https://www.google.com/maps/place/25916+Avenue+17,+Madera,+CA+93638/@36.9960561,-120.077975,17z/data=!3m1!4b1!4m6!3m5!1s0x80940950da95aedf:0x3787412e13064a83!8m2!3d36.9960561!4d-120.0757863!16s%2Fg%2F11bw4q5p0h" target="_blank">
-                            <div class="item_icon location_icon">
-                                <img src="/shelter/assets/icons/icon-marker.svg" alt="marker icon">
-                            </div>
-                            <div class="item_content">
-                                <h4>1 Central Street, Boston (entrance from the store)</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="footer_item">
-                        <a href="https://www.google.com/maps/place/25916+Avenue+17,+Madera,+CA+93638/@36.9960561,-120.077975,17z/data=!3m1!4b1!4m6!3m5!1s0x80940950da95aedf:0x3787412e13064a83!8m2!3d36.9960561!4d-120.0757863!16s%2Fg%2F11bw4q5p0h" target="_blank">
-                            <div class="item_icon location_icon">
-                                <img src="/shelter/assets/icons/icon-marker.svg" alt="marker icon">
-                            </div>
-                            <div class="item_content">
-                                <h4>18 South Park, London</h4>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+      <div class="footer_img">
+        <img src="/shelter/assets/images/footer-puppy.svg" alt="footer puppy">
+      </div>
 
-            </div>
-
-            <div class="footer_img">
-                <img src="/shelter/assets/images/footer-puppy.svg" alt="footer puppy">
-            </div>
-
-        </footer> <!-- FOOTER ENDS -->
-    </body>
+    </footer> <!-- FOOTER ENDS -->
+  </body>
 </html>
