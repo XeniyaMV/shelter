@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 // *BURGER MENU VARIABLES
-    let burgerMenuIcon = document.querySelector('.burger');
+    let burgerMenuIcon = document.querySelector('.menu__burger');
     let burgerClickCounter = 0;
     let nav = document.querySelector('nav');
     let body = document.querySelector('body');
@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     body.addEventListener('click', function(event) {
-        if (nav.classList.contains('small_screen') && (!event.target.closest('.menu'))) {
-            nav.classList.remove('small_screen');
+        if (nav.classList.contains('menu__nav_small-screen') && (!event.target.closest('.menu'))) {
+            nav.classList.remove('menu__nav_small-screen');
             burgerMenuIcon.firstElementChild.style.transform = '';
             burgerClickCounter += 1;
             burgerMenuIcon.style.position = 'absolute';
@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
     
     nav.addEventListener('click', function(event) {
         
-        if (event.target.tagName == 'A' && nav.classList.contains('small_screen')) {
-            nav.classList.remove('small_screen');
+        if (event.target.tagName == 'A' && nav.classList.contains('menu__nav_small-screen')) {
+            nav.classList.remove('menu__nav_small-screen');
             burgerMenuIcon.firstElementChild.style.transform = '';
             burgerClickCounter += 1;
             burgerMenuIcon.style.position = 'absolute';
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (burgerClickCounter % 2 == 1) {
             burgerMenuIcon.firstElementChild.style.transform = 'rotate(90deg)';
             burgerMenuIcon.style.position = 'fixed';
-            nav.classList.add('small_screen');
+            nav.classList.add('menu__nav_small-screen');
             body.classList.add('active');
             dark.style.width = `100vw`;
             body.prepend(dark);
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
         else {
             burgerMenuIcon.firstElementChild.style.transform = '';
             burgerMenuIcon.style.position = 'absolute';
-            nav.classList.remove('small_screen');
+            nav.classList.remove('menu__nav_small-screen');
             body.classList.remove('active');
             dark.style.width='0px';
         }
