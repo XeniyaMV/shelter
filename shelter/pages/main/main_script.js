@@ -89,70 +89,70 @@ document.addEventListener('DOMContentLoaded', function () {
     //     </div>
     //</div>
     function getMobilePetCard(petInfo) {
-        let divPetCardContainer = document.createElement('div');
+        let divPetCardContainer = document.createElement('article');
         let innerText = `
-        <button class="circle_button"> <img src="/shelter/assets/icons/Vector.svg" alt="x"> </button>
-        <div class="clicked_card">
-            <div class="pet_img">
-               <img src="${petInfo.img}" alt="${petInfo.name}">
+        <button class="button button_circle popup-card__close-button"> <img src="/shelter/assets/icons/Vector.svg" alt="x"> </button>
+        <div class="popup-card__container">
+            <div class="popup-card__pet-img">
+               <img class="img" src="${petInfo.img}" alt="${petInfo.name}">
             </div>
-            <div class="pet_info">
-                <div class="title">
-                    <h3 class="pet_name">${petInfo.name}</h3>
-                    <h4 class="sub_title">${petInfo.type} - ${petInfo.breed}</h4>
+            <div class="popup-card__pet-info">
+                <div class="popup-card__title">
+                    <h3 class="h3 popup-card__pet-name">${petInfo.name}</h3>
+                    <h4 class="popup-card__sub-title">${petInfo.type} - ${petInfo.breed}</h4>
                 </div>
-                <p>${petInfo.description}</p>
-                <ul>
-                    <li class="item"><b>Age</b>: ${petInfo.age}</li>
-                    <li class="item"><b>Inoculations</b>: ${petInfo.inoculations}</li>
-                    <li class="item"><b>Diseases</b>: ${petInfo.diseases}</li>
-                    <li class="item"><b>Parasites</b>: ${petInfo.parasites}</li>
+                <p class="popup-card__description">${petInfo.description}</p>
+                <ul class="popup-card__list">
+                    <li class="popup-card__list-item"><b>Age</b>: ${petInfo.age}</li>
+                    <li class="popup-card__list-item"><b>Inoculations</b>: ${petInfo.inoculations}</li>
+                    <li class="popup-card__list-item"><b>Diseases</b>: ${petInfo.diseases}</li>
+                    <li class="popup-card__list-item"><b>Parasites</b>: ${petInfo.parasites}</li>
                 </ul>
             </div>
         </div>
         `
         
-        divPetCardContainer.classList.add('clicked_card_container');
+        divPetCardContainer.classList.add('popup-card');
         divPetCardContainer.innerHTML = innerText;
 
         return divPetCardContainer;
-
     }
 
-    // <div class="pet_card">
-    //    <div class="pet_img">
-    //        <img src="/shelter/assets/images/pets-sophia.svg" alt="Sophia">
+    // <div class="slider__pet-card">
+    //    <div class="slider__pet-img">
+    //        <img class="img" src="/shelter/assets/images/pets-sophia.svg" alt="Sophia">
     //    </div>
-    //    <p class="pet_name"> Sophia </p>
-    //    <button>Learn more</button>
+    //    <p class="slider__pet-name"> Sophia </p>
+    //    <button class="button slider__button">Learn more</button>
     // </div>
 
 
     function getPetCard(petInfo) {
-        let divPetCard = document.createElement('div');
+        let divPetCard = document.createElement('article');
         let divPetImg = document.createElement('div');
         let petImg = document.createElement('img');
-        let p = document.createElement('p');
+        let title = document.createElement('h4');
         let button = document.createElement('button');
 
-        divPetCard.classList.add('pet_card');
-        divPetImg.classList.add('pet_img');
+        divPetCard.classList.add('slider__pet-card');
+        divPetImg.classList.add('slider__pet-img');
+        petImg.classList.add('img');
         petImg.setAttribute('src', petInfo['img']);
         petImg.setAttribute('alt', petInfo['name']);
-        p.classList.add('pet_name');
-        p.textContent = petInfo['name'];
+        title.classList.add('slider__pet-name');
+        title.textContent = petInfo['name'];
+        button.classList.add('button');
+        button.classList.add('slider__button');
         button.textContent = 'Learn more';
 
         divPetImg.append(petImg);
         divPetCard.append(divPetImg);
-        divPetCard.append(p);
+        divPetCard.append(title);
         divPetCard.append(button);
 
         divPetCard.addEventListener('click', function() {
             const petsContainer = document.querySelector('.pets');
-            const sliderContainer = document.querySelector('.slider_content');
-            const oldCard = document.querySelector('.clicked_card');
-            
+            const oldCard = document.querySelector('.popup-card');
             const card = getMobilePetCard(petInfo);
             let dark = document.createElement('div');
 
@@ -165,33 +165,33 @@ document.addEventListener('DOMContentLoaded', function () {
                 top: 0px;
                 left: 0px;
             `;
+
             if (oldCard) {
                 oldCard.remove();
             }
-
 
             petsContainer.append(card);
             petsContainer.append(dark);
             body.style.overflow = 'hidden';
 
-            let buttonX = document.querySelector('.clicked_card_container button');
+            let buttonX = document.querySelector('.popup-card .button');
             buttonX.addEventListener('click', function() {
                 card.remove();
                 dark.remove();
                 body.style.overflow = '';
 
-            })
+            });
 
             body.addEventListener('click', function(event) {
-                if (event.target.closest('.pet_card')) {
+                if (event.target.closest('.slider__pet-card')) {
                     return;
                 }
-                if (!event.target.closest('.clicked_card')) {
+                if (!event.target.closest('.popup-card__container')) {
                     card.remove();
                     dark.remove();
                     body.style.overflow = '';
                 }
-            })
+            });
 
         })
 
@@ -232,11 +232,11 @@ document.addEventListener('DOMContentLoaded', function () {
     async function setSlider(jsonPath) {
         const response = await fetch(jsonPath);
         const resJSON = await response.json();
-        let sliderContainer = document.querySelector('.slider_content');
+        let sliderContainer = document.querySelector('.slider__content');
         let flag = 0;
 
-        const rightButton = document.querySelector('.right');
-        const leftButton = document.querySelector('.left');
+        const rightButton = document.querySelector('.slider__right');
+        const leftButton = document.querySelector('.slider__left');
 
         let cards = [];
         

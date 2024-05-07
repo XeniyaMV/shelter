@@ -119,6 +119,22 @@ body.active {
       background-color: $color-primary-light;
       border: 2px solid $color-primary-light;
   }
+
+  &_circle {
+    width: 52px;
+    padding: 0px;
+    border-radius: 100px;
+    background-color: $color-light-l;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:disabled {
+        border: 2px solid $color-dark-s;
+        &:hover {
+            background-color: $color-light-l;
+        }
+    }
+  }
 }
 
 .h3{
@@ -140,7 +156,7 @@ body.active {
 }
 
 .img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -545,107 +561,67 @@ body.active {
 //--PETS STARTS--
 .pets {
     background-color: $color-light-l;
-}
-.pets_slider {
-    width: 1200px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    &__content {
+      padding: 80px 40px 100px 40px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 60px;
+    }
 
-    @media screen and (min-width:1163px) and (max-width: 1279px){
+    &__title {
+      @media screen and (max-width:600px) {
+        font-size: 25px;
+      }
+    }
+
+    &__button {
+      width: 260px;
+    }
+
+    &__slider {
+      width: 1200px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media screen and (min-width:1163px) and (max-width: 1279px){
         width: 93vw;
-    }
+      }
 
-    @media screen and (min-width:1101px) and (max-width: 1163px){
+      @media screen and (min-width:1101px) and (max-width: 1163px){
         width: 85vw;
-    }
-    @media screen and (min-width:715px) and (max-width:1100px) {
+      }
+
+      @media screen and (min-width:715px) and (max-width:1100px) {
         width: 80vw;
         min-width: 708px;
-        // max-width: 708px;
-    }
-    @media screen and (min-width: 683px) and (max-width: 715px) {
+      }
+
+      @media screen and (min-width: 683px) and (max-width: 715px) {
         width: 85vw;
         justify-content: space-around;
         row-gap: 20px;
         flex-wrap: wrap;
-        .left {
-            order: 1;
-        }
-        .right {
-            order:2;
-        }
+      }
 
-        
-        
-    }
-
-    @media screen and (max-width: 683px)
-    {
+      @media screen and (max-width: 683px) {
         width: 85vw;
-
         display: grid;
         grid-template-areas: 
             'slider slider'
             'left right';
         row-gap: 20px;
         column-gap: 80px;
-    }
-}
-.pets_content {
-    padding: 80px 40px 100px 40px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 60px;
-
-
-    
-    h3 {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 35px;
-        line-height: 130%;
-        letter-spacing: 0.06em;
-        color: $color-dark-l;
-
-        @media screen and (max-width:600px) {
-            font-size: 25px;
-        }
-    }
-
-    button {
-        @extend %button;
-        width: 260px;
-
-        }
-
-    .circle_button{
-        @extend %circle_button;
-    }
-    .left {
-        background-image: url("/shelter/assets/icons/Arrow.svg");
-        grid-area: left;
-        @media screen and (max-width: 683px) {
-            justify-self: end;
-        }
-
-    }
-    .right {
-        background-image: url("/shelter/assets/icons/Arrow.svg");
-        transform: rotate(180deg);
-        grid-area: right;
-    }
-
-    @media screen and (min-width:1101px) and (max-width: 1279px){
-        
+      }
     }
 
     @media screen and (min-width:600px) and (max-width:1100px) {
-        padding-left: 30px;
-        padding-right: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
     }
 
     @media screen and (max-width:600px) {
@@ -653,51 +629,57 @@ body.active {
         row-gap: 42px;
     }
 }
-.slider_content {
+
+.slider {
+  &__content {
     width: 990px;
     overflow: hidden;
-    
-    
     display: flex;
     height: 435px;
     column-gap: calc((990px - 270px*3)/2);
-    // justify-content: space-between;
-    
     grid-area: slider;
     scroll-behavior: smooth;
     transition: transform 0.5s;
-    // transform: translateX(0);
 
-    // @media screen and (min-width:1101px) and (max-width: 1279px){
-        // width: 80vw;
     @media screen and (min-width:1185px) and (max-width: 1279px){
-
-        width: 990px;
-        column-gap: calc((990px - 270px*3)/2);
-
+      width: 990px;
+      column-gap: calc((990px - 270px*3)/2);
     }
-        
 
-    // @media screen and (min-width:636px) and (max-width:1100px) {
-        // max-width: 580px;
     @media screen and (min-width:683px) and (max-width:1184px) {
-        width: 580px;
-        column-gap: calc((580px - 270px*2));
-
+      width: 580px;
+      column-gap: calc((580px - 270px*2));
     }
 
     @media screen and (max-width:683px) {
-        width: 270px;
-        justify-self: center;
-        // width: 529px;
-        // justify-content: center;
-        column-gap: calc((580px - 270px*2));
-
+      width: 270px;
+      justify-self: center;
+      column-gap: calc((580px - 270px*2));
     }
-    
+  }
 
-}
-.pet_card {
+  &__right {
+    background-image: url("/shelter/assets/icons/Arrow.svg");
+    transform: rotate(180deg);
+    grid-area: right;
+
+    @media screen and (min-width: 683px) and (max-width: 715px) {
+      order: 2;
+    }
+  }
+
+  &__left {
+    background-image: url("/shelter/assets/icons/Arrow.svg");
+    grid-area: left;
+    @media screen and (min-width: 683px) and (max-width: 715px) {
+      order: 1;
+    }
+    @media screen and (max-width: 683px) {
+        justify-self: end;
+    }
+  }
+
+  &__pet-card {
     width: 270px;
     height: 435px;
     background-color: $color-light-s;
@@ -707,224 +689,223 @@ body.active {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    // transition: background-color 0.5s;
-
     transition: background-color 0.5s, transform 0.65s;
 
-    .pet_img {
-        width: 270px;
-    }
-
-    .pet_name {
-        color: $color-dark-l;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 23px;
-        letter-spacing: 0.06em;
-    }
-
-    button {
-        @extend %button;
-        width: 187px;
-        background-color: $color-light-s;
-
-    }
     &:hover {
-        cursor: pointer;
-        background-color: $color-light-xl;
-
-        button {
-            background-color: $color-primary-light;
-            border: 2px solid $color-primary-light;
-        }
+      cursor: pointer;
+      background-color: $color-light-xl;
     }
+  }
+
+  &__pet-img {
+    width: 270px;
+  }
+
+  &__pet-name {
+    color: $color-dark-l;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+  }
+
+  &__button {
+    width: 187px;
+    background-color: $color-light-s;
+  }
+
+  &__pet-card:hover &__button {
+    background-color: $color-primary-light;
+    border: 2px solid $color-primary-light;
+  }
 }
 
-.clicked_card_container {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    @media screen  and (min-width: 1109px){
-        width: 952px;
-        height: 552px;
-        margin-left: -450px;
-        margin-top: -302px;
-    }
-    @media screen and (max-width:1108px) {
-        width: 682px;
-        height: 402px;
-        margin-left: -315px;
-        margin-top: -227px;
-    }
-    @media screen and (max-width: 735px) {
-        width: 270px;
-        height: 393px;
-        margin-left: -120px;
-        margin-top: -222.5px;
-    }
-    button {
-        @extend %button;
-    }
-    .circle_button {
-        @extend %circle_button;
-        background-color: transparent;
-        align-self: flex-end;
-    }
-}
+.popup-card {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
 
-.clicked_card {
+  &__container {
     display: flex;
     column-gap: 30px;
     background-color: $color-light-s;
     box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     border-radius: 9px;
-    
-    .pet_img {
-        width: 500px;
-        height: 500px;
+    overflow: hidden;
 
-
-        img {
-            width: 500px;
-            height: 500px;
-        }
-    }
-    .pet_info {
-        padding-right: 20px;
-        padding-top: 50px;
-        display: flex;
-        flex-direction: column;
-        row-gap: 40px;
-        .title {
-            display: flex;
-            flex-direction: column;
-            row-gap: 10px;
-        }
-        .pet_name {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 35px;
-            line-height: 130%;
-            letter-spacing: 0.06em;
-            color: #000000;
-        }
-        .sub_title {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 115%;
-            letter-spacing: 0.06em;
-            color: #000000;
-        }
-        p {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 110%;
-            letter-spacing: 0.06em;
-            color: #000000;
-        }
-
-        ul {
-            display: flex;
-            flex-direction: column;
-            row-gap: 11px;
-            color: $color-primary;
-            list-style: none;
-            .item {
-                font-style: normal;
-                font-weight: 400;
-                font-size: 15px;
-                line-height: 110%;
-                letter-spacing: 0.06em;
-                color: #000000;
-            }
-            .item::before {
-                content: "•"; 
-                color: $color-primary;
-                display: inline-block; 
-                width: 4px;
-                margin-right: 10px;
-            }
-        }
-    }
     @media screen and (min-width: 1109px){
-        width: 900px;
-        height: 500px;
+      width: 900px;
+      height: 500px;
     }
 
     @media screen and (max-width:1108px) {
-        width: 630px;
-        height: 350px;
-        column-gap: 11px;
-        .pet_img {
-            width: 350px;
-            height: 350px;
-            img {
-                width: 350px;
-                height: 350px;
-            }
-        }
-        .pet_info {
-            padding-right: 9px;
-            padding-top: 10px;
-            row-gap: 20px;
-
-            .pet_name {
-                text-align: center;
-            }
-            .sub_title {
-                text-align: center;
-            }
-
-            p {
-                font-size: 13px;
-            }
-
-            ul {
-                align-self: flex-start;
-                row-gap: 5px;
-            }
-        }
-
+      width: 630px;
+      height: 350px;
+      column-gap: 11px;
     }
+
     @media screen and (max-width: 735px) {
-        width: 240px;
-        height: 341px;
-        padding: 10px;
-        align-items: center;
-        .pet_img {
-            display: none;
-        }
-
-        .pet_info {
-            padding: 0px;
-            width: 220px;
-            height: 321px;
-            overflow: scroll;
-            overflow-x: hidden;
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-
-
-            p {
-                text-align: justify;
-            }
-            ul {
-                margin-top: 4px;
-            }
-        }
-        
-        .pet_info::-webkit-scrollbar {
-            display: none;
-        }
+      width: 240px;
+      height: 341px;
+      padding: 10px;
+      align-items: center;
     }
-}
+  }
 
+  &__close-button {
+    background-color: transparent;
+    align-self: flex-end;
+  }
+
+  &__pet-img {
+    min-width: 500px;
+    height: 500px;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    @media screen and (max-width:1108px) {
+      min-width: 350px;
+      height: 350px;
+    }
+
+    @media screen and (max-width: 735px) {
+      display: none;
+    }
+  }
+
+  &__pet-info {
+    padding-right: 20px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+
+    @media screen and (max-width:1108px) {
+      padding-right: 9px;
+      padding-top: 10px;
+      row-gap: 20px;
+    }
+
+    @media screen and (max-width: 735px) {
+      padding: 0px;
+      width: 220px;
+      height: 321px;
+      overflow: scroll;
+      overflow-x: hidden;
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  &__pet-name {
+    color: #000000;
+
+    @media screen and (max-width:1108px) {
+      text-align: center;
+    }
+  }
+
+  &__sub-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #000000;
+
+    @media screen and (max-width:1108px) {
+      text-align: center;
+    }
+  }
+
+  &__description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #000000;
+
+    @media screen and (max-width:1108px) {
+      font-size: 13px;
+    }
+
+    @media screen and (max-width: 735px) {
+      text-align: justify;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 11px;
+    color: $color-primary;
+    list-style: none;
+
+    @media screen and (max-width:1108px) {
+      align-self: flex-start;
+      row-gap: 5px;
+    }
+
+    @media screen and (max-width: 735px) {
+      margin-top: 4px;
+    }
+  }
+
+  &__list-item {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #000000;
+
+    &::before {
+      content: "•"; 
+      color: $color-primary;
+      display: inline-block; 
+      width: 4px;
+      margin-right: 10px;
+    }
+  }
+
+  @media screen  and (min-width: 1109px){
+    width: 952px;
+    height: 552px;
+    margin-left: -450px;
+    margin-top: -302px;
+  }
+
+  @media screen and (max-width:1108px) {
+    width: 682px;
+    height: 402px;
+    margin-left: -315px;
+    margin-top: -227px;
+  }
+
+  @media screen and (max-width: 735px) {
+    width: 270px;
+    height: 393px;
+    margin-left: -120px;
+    margin-top: -222.5px;
+  }
+}
 
 //--PETS ENDS--
 

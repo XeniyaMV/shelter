@@ -25,43 +25,6 @@ body.active {
   }
 }
 
-.clicked_card_container button, .pet_card button, .pets_content button {
-  padding: 15px 42px;
-  width: 207px;
-  height: 52px;
-  background-color: #F1CDB3;
-  border-color: #F1CDB3;
-  border-radius: 100px;
-  transition: background-color 0.5s;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 130%;
-  letter-spacing: 0.06em;
-  color: #292929;
-  border: 2px solid #F1CDB3;
-  cursor: pointer;
-}
-.clicked_card_container button:hover, .pet_card button:hover, .pets_content button:hover {
-  background-color: #FDDCC4;
-  border: 2px solid #FDDCC4;
-}
-
-.clicked_card_container .circle_button, .pets_content .circle_button {
-  width: 52px;
-  padding: 0px;
-  border-radius: 100px;
-  background-color: #F6F6F6;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.clicked_card_container .circle_button:disabled, .pets_content .circle_button:disabled {
-  border: 2px solid #CDCDCD;
-}
-.clicked_card_container .circle_button:disabled:hover, .pets_content .circle_button:disabled:hover {
-  background-color: #F6F6F6;
-}
-
 .button {
   padding: 15px 42px;
   width: 207px;
@@ -83,6 +46,20 @@ body.active {
   background-color: #FDDCC4;
   border: 2px solid #FDDCC4;
 }
+.button_circle {
+  width: 52px;
+  padding: 0px;
+  border-radius: 100px;
+  background-color: #F6F6F6;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.button_circle:disabled {
+  border: 2px solid #CDCDCD;
+}
+.button_circle:disabled:hover {
+  background-color: #F6F6F6;
+}
 
 .h3 {
   font-style: normal;
@@ -103,7 +80,7 @@ body.active {
 }
 
 .img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -501,54 +478,7 @@ body.active {
 .pets {
   background-color: #F6F6F6;
 }
-
-.pets_slider {
-  width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-@media screen and (min-width: 1163px) and (max-width: 1279px) {
-  .pets_slider {
-    width: 93vw;
-  }
-}
-@media screen and (min-width: 1101px) and (max-width: 1163px) {
-  .pets_slider {
-    width: 85vw;
-  }
-}
-@media screen and (min-width: 715px) and (max-width: 1100px) {
-  .pets_slider {
-    width: 80vw;
-    min-width: 708px;
-  }
-}
-@media screen and (min-width: 683px) and (max-width: 715px) {
-  .pets_slider {
-    width: 85vw;
-    justify-content: space-around;
-    row-gap: 20px;
-    flex-wrap: wrap;
-  }
-  .pets_slider .left {
-    order: 1;
-  }
-  .pets_slider .right {
-    order: 2;
-  }
-}
-@media screen and (max-width: 683px) {
-  .pets_slider {
-    width: 85vw;
-    display: grid;
-    grid-template-areas: "slider slider" "left right";
-    row-gap: 20px;
-    column-gap: 80px;
-  }
-}
-
-.pets_content {
+.pets__content {
   padding: 80px 40px 100px 40px;
   text-align: center;
   display: flex;
@@ -556,50 +486,67 @@ body.active {
   align-items: center;
   row-gap: 60px;
 }
-.pets_content h3 {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 35px;
-  line-height: 130%;
-  letter-spacing: 0.06em;
-  color: #545454;
-}
 @media screen and (max-width: 600px) {
-  .pets_content h3 {
+  .pets__title {
     font-size: 25px;
   }
 }
-.pets_content button {
+.pets__button {
   width: 260px;
 }
-.pets_content .left {
-  background-image: url("/shelter/assets/icons/Arrow.svg");
-  grid-area: left;
+.pets__slider {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-@media screen and (max-width: 683px) {
-  .pets_content .left {
-    justify-self: end;
+@media screen and (min-width: 1163px) and (max-width: 1279px) {
+  .pets__slider {
+    width: 93vw;
   }
 }
-.pets_content .right {
-  background-image: url("/shelter/assets/icons/Arrow.svg");
-  transform: rotate(180deg);
-  grid-area: right;
+@media screen and (min-width: 1101px) and (max-width: 1163px) {
+  .pets__slider {
+    width: 85vw;
+  }
+}
+@media screen and (min-width: 715px) and (max-width: 1100px) {
+  .pets__slider {
+    width: 80vw;
+    min-width: 708px;
+  }
+}
+@media screen and (min-width: 683px) and (max-width: 715px) {
+  .pets__slider {
+    width: 85vw;
+    justify-content: space-around;
+    row-gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 683px) {
+  .pets__slider {
+    width: 85vw;
+    display: grid;
+    grid-template-areas: "slider slider" "left right";
+    row-gap: 20px;
+    column-gap: 80px;
+  }
 }
 @media screen and (min-width: 600px) and (max-width: 1100px) {
-  .pets_content {
+  .pets {
     padding-left: 30px;
     padding-right: 30px;
   }
 }
 @media screen and (max-width: 600px) {
-  .pets_content {
+  .pets {
     padding: 42px 10px;
     row-gap: 42px;
   }
 }
 
-.slider_content {
+.slider__content {
   width: 990px;
   overflow: hidden;
   display: flex;
@@ -610,26 +557,49 @@ body.active {
   transition: transform 0.5s;
 }
 @media screen and (min-width: 1185px) and (max-width: 1279px) {
-  .slider_content {
+  .slider__content {
     width: 990px;
     column-gap: 90px;
   }
 }
 @media screen and (min-width: 683px) and (max-width: 1184px) {
-  .slider_content {
+  .slider__content {
     width: 580px;
     column-gap: 40px;
   }
 }
 @media screen and (max-width: 683px) {
-  .slider_content {
+  .slider__content {
     width: 270px;
     justify-self: center;
     column-gap: 40px;
   }
 }
-
-.pet_card {
+.slider__right {
+  background-image: url("/shelter/assets/icons/Arrow.svg");
+  transform: rotate(180deg);
+  grid-area: right;
+}
+@media screen and (min-width: 683px) and (max-width: 715px) {
+  .slider__right {
+    order: 2;
+  }
+}
+.slider__left {
+  background-image: url("/shelter/assets/icons/Arrow.svg");
+  grid-area: left;
+}
+@media screen and (min-width: 683px) and (max-width: 715px) {
+  .slider__left {
+    order: 1;
+  }
+}
+@media screen and (max-width: 683px) {
+  .slider__left {
+    justify-self: end;
+  }
+}
+.slider__pet-card {
   width: 270px;
   height: 435px;
   background-color: #FAFAFA;
@@ -640,10 +610,14 @@ body.active {
   gap: 30px;
   transition: background-color 0.5s, transform 0.65s;
 }
-.pet_card .pet_img {
+.slider__pet-card:hover {
+  cursor: pointer;
+  background-color: #FFFFFF;
+}
+.slider__pet-img {
   width: 270px;
 }
-.pet_card .pet_name {
+.slider__pet-name {
   color: #545454;
   font-style: normal;
   font-weight: 400;
@@ -651,20 +625,16 @@ body.active {
   line-height: 23px;
   letter-spacing: 0.06em;
 }
-.pet_card button {
+.slider__button {
   width: 187px;
   background-color: #FAFAFA;
 }
-.pet_card:hover {
-  cursor: pointer;
-  background-color: #FFFFFF;
-}
-.pet_card:hover button {
+.slider__pet-card:hover .slider__button {
   background-color: #FDDCC4;
   border: 2px solid #FDDCC4;
 }
 
-.clicked_card_container {
+.popup-card {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -672,158 +642,74 @@ body.active {
   top: 50%;
   left: 50%;
 }
-@media screen and (min-width: 1109px) {
-  .clicked_card_container {
-    width: 952px;
-    height: 552px;
-    margin-left: -450px;
-    margin-top: -302px;
-  }
-}
-@media screen and (max-width: 1108px) {
-  .clicked_card_container {
-    width: 682px;
-    height: 402px;
-    margin-left: -315px;
-    margin-top: -227px;
-  }
-}
-@media screen and (max-width: 735px) {
-  .clicked_card_container {
-    width: 270px;
-    height: 393px;
-    margin-left: -120px;
-    margin-top: -222.5px;
-  }
-}
-.clicked_card_container .circle_button {
-  background-color: transparent;
-  align-self: flex-end;
-}
-
-.clicked_card {
+.popup-card__container {
   display: flex;
   column-gap: 30px;
   background-color: #FAFAFA;
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
   border-radius: 9px;
+  overflow: hidden;
 }
-.clicked_card .pet_img {
-  width: 500px;
+@media screen and (min-width: 1109px) {
+  .popup-card__container {
+    width: 900px;
+    height: 500px;
+  }
+}
+@media screen and (max-width: 1108px) {
+  .popup-card__container {
+    width: 630px;
+    height: 350px;
+    column-gap: 11px;
+  }
+}
+@media screen and (max-width: 735px) {
+  .popup-card__container {
+    width: 240px;
+    height: 341px;
+    padding: 10px;
+    align-items: center;
+  }
+}
+.popup-card__close-button {
+  background-color: transparent;
+  align-self: flex-end;
+}
+.popup-card__pet-img {
+  min-width: 500px;
   height: 500px;
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
-.clicked_card .pet_img img {
-  width: 500px;
-  height: 500px;
+@media screen and (max-width: 1108px) {
+  .popup-card__pet-img {
+    min-width: 350px;
+    height: 350px;
+  }
 }
-.clicked_card .pet_info {
+@media screen and (max-width: 735px) {
+  .popup-card__pet-img {
+    display: none;
+  }
+}
+.popup-card__pet-info {
   padding-right: 20px;
   padding-top: 50px;
   display: flex;
   flex-direction: column;
   row-gap: 40px;
 }
-.clicked_card .pet_info .title {
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-}
-.clicked_card .pet_info .pet_name {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 35px;
-  line-height: 130%;
-  letter-spacing: 0.06em;
-  color: #000000;
-}
-.clicked_card .pet_info .sub_title {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 115%;
-  letter-spacing: 0.06em;
-  color: #000000;
-}
-.clicked_card .pet_info p {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 110%;
-  letter-spacing: 0.06em;
-  color: #000000;
-}
-.clicked_card .pet_info ul {
-  display: flex;
-  flex-direction: column;
-  row-gap: 11px;
-  color: #F1CDB3;
-  list-style: none;
-}
-.clicked_card .pet_info ul .item {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 110%;
-  letter-spacing: 0.06em;
-  color: #000000;
-}
-.clicked_card .pet_info ul .item::before {
-  content: "•";
-  color: #F1CDB3;
-  display: inline-block;
-  width: 4px;
-  margin-right: 10px;
-}
-@media screen and (min-width: 1109px) {
-  .clicked_card {
-    width: 900px;
-    height: 500px;
-  }
-}
 @media screen and (max-width: 1108px) {
-  .clicked_card {
-    width: 630px;
-    height: 350px;
-    column-gap: 11px;
-  }
-  .clicked_card .pet_img {
-    width: 350px;
-    height: 350px;
-  }
-  .clicked_card .pet_img img {
-    width: 350px;
-    height: 350px;
-  }
-  .clicked_card .pet_info {
+  .popup-card__pet-info {
     padding-right: 9px;
     padding-top: 10px;
     row-gap: 20px;
   }
-  .clicked_card .pet_info .pet_name {
-    text-align: center;
-  }
-  .clicked_card .pet_info .sub_title {
-    text-align: center;
-  }
-  .clicked_card .pet_info p {
-    font-size: 13px;
-  }
-  .clicked_card .pet_info ul {
-    align-self: flex-start;
-    row-gap: 5px;
-  }
 }
 @media screen and (max-width: 735px) {
-  .clicked_card {
-    width: 240px;
-    height: 341px;
-    padding: 10px;
-    align-items: center;
-  }
-  .clicked_card .pet_img {
-    display: none;
-  }
-  .clicked_card .pet_info {
+  .popup-card__pet-info {
     padding: 0px;
     width: 220px;
     height: 321px;
@@ -832,14 +718,109 @@ body.active {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
-  .clicked_card .pet_info p {
+  .popup-card__pet-info::-webkit-scrollbar {
+    display: none;
+  }
+}
+.popup-card__title {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.popup-card__pet-name {
+  color: #000000;
+}
+@media screen and (max-width: 1108px) {
+  .popup-card__pet-name {
+    text-align: center;
+  }
+}
+.popup-card__sub-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+@media screen and (max-width: 1108px) {
+  .popup-card__sub-title {
+    text-align: center;
+  }
+}
+.popup-card__description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+@media screen and (max-width: 1108px) {
+  .popup-card__description {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 735px) {
+  .popup-card__description {
     text-align: justify;
   }
-  .clicked_card .pet_info ul {
+}
+.popup-card__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 11px;
+  color: #F1CDB3;
+  list-style: none;
+}
+@media screen and (max-width: 1108px) {
+  .popup-card__list {
+    align-self: flex-start;
+    row-gap: 5px;
+  }
+}
+@media screen and (max-width: 735px) {
+  .popup-card__list {
     margin-top: 4px;
   }
-  .clicked_card .pet_info::-webkit-scrollbar {
-    display: none;
+}
+.popup-card__list-item {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+.popup-card__list-item::before {
+  content: "•";
+  color: #F1CDB3;
+  display: inline-block;
+  width: 4px;
+  margin-right: 10px;
+}
+@media screen and (min-width: 1109px) {
+  .popup-card {
+    width: 952px;
+    height: 552px;
+    margin-left: -450px;
+    margin-top: -302px;
+  }
+}
+@media screen and (max-width: 1108px) {
+  .popup-card {
+    width: 682px;
+    height: 402px;
+    margin-left: -315px;
+    margin-top: -227px;
+  }
+}
+@media screen and (max-width: 735px) {
+  .popup-card {
+    width: 270px;
+    height: 393px;
+    margin-left: -120px;
+    margin-top: -222.5px;
   }
 }
 
