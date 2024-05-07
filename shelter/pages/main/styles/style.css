@@ -947,8 +947,7 @@ body.active {
 .donation {
   background-color: #F6F6F6;
 }
-
-.donation_content {
+.donation__content {
   padding-top: 80px;
   padding-bottom: 100px;
   display: flex;
@@ -958,82 +957,68 @@ body.active {
   column-gap: 30px;
 }
 @media screen and (min-width: 1101px) and (max-width: 1279px) {
-  .donation_content {
+  .donation__content {
     column-gap: 1vw;
   }
 }
 @media screen and (min-width: 760px) and (max-width: 1100px) {
-  .donation_content {
+  .donation__content {
     flex-direction: column-reverse;
     row-gap: 60px;
   }
 }
 @media screen and (max-width: 760px) {
-  .donation_content {
+  .donation__content {
     flex-direction: column-reverse;
     row-gap: 42px;
     padding: 42px 10px;
   }
 }
-
-.donation_content_img {
+.donation__img-conatiner {
   max-width: 505px;
   max-height: 261px;
   flex-shrink: 1;
 }
-.donation_content_img img {
-  max-width: 100%;
-  height: auto;
-}
 @media screen and (max-width: 700px) {
-  .donation_content_img {
+  .donation__img-conatiner {
     width: 65vw;
     min-width: 260px;
     height: auto;
   }
-  .donation_content_img img {
-    width: 100%;
-    height: auto;
-  }
 }
 @media screen and (max-width: 450px) {
-  .donation_content_img {
+  .donation__img-conatiner {
     width: 81.25vw;
     min-width: 260px;
     height: auto;
   }
-  .donation_content_img img {
-    width: 100%;
-    height: auto;
-  }
 }
-
-.donation_content_text {
+.donation__text {
   max-width: 380px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   row-gap: 20px;
 }
-.donation_content_text a {
-  text-decoration: none;
-  color: black;
-}
-.donation_content_text h3 {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 35px;
-  line-height: 130%;
-  letter-spacing: 0.06em;
-  color: #545454;
+@media screen and (min-width: 1101px) and (max-width: 1279px) {
+  .donation__text {
+    max-width: 400px;
+    min-width: 300px;
+  }
 }
 @media screen and (max-width: 700px) {
-  .donation_content_text h3 {
+  .donation__text {
+    width: 100%;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  .donation__title {
     font-size: 25px;
     text-align: center;
   }
 }
-.donation_content_text h5 {
+.donation__subtitle {
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -1042,14 +1027,16 @@ body.active {
   color: #545454;
 }
 @media screen and (max-width: 700px) {
-  .donation_content_text h5 {
+  .donation__subtitle {
     font-size: 15px;
     line-height: 160%;
     text-align: center;
     letter-spacing: normal;
   }
 }
-.donation_content_text .credit_card {
+.donation__credit-card {
+  text-decoration: none;
+  color: black;
   background-color: #F1CDB3;
   border-radius: 9px;
   padding: 10px 15px;
@@ -1060,11 +1047,37 @@ body.active {
   justify-content: space-between;
   transition: background-color 0.5s;
 }
-.donation_content_text .credit_card .credit_card_icon {
+.donation__credit-card:hover {
+  background-color: #FDDCC4;
+}
+@media screen and (max-width: 700px) {
+  .donation__credit-card {
+    width: 50vw;
+  }
+}
+@media screen and (max-width: 550px) {
+  .donation__credit-card {
+    width: 50vw;
+    min-width: 281px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 283px) {
+  .donation__credit-card {
+    width: 100%;
+    min-width: 85vw;
+  }
+}
+.donation__icon-container {
   width: 30px;
   height: 23px;
 }
-.donation_content_text .credit_card .credit_card_number h4 {
+.donation__number-container {
+  display: flex;
+  align-items: center;
+}
+.donation__number {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -1073,44 +1086,22 @@ body.active {
   color: #545454;
 }
 @media screen and (max-width: 675px) {
-  .donation_content_text .credit_card .credit_card_number h4 {
+  .donation__number {
     font-size: 18px;
     line-height: 110%;
   }
 }
 @media screen and (max-width: 620px) {
-  .donation_content_text .credit_card .credit_card_number h4 {
+  .donation__number {
     font-size: 15px;
   }
 }
 @media screen and (max-width: 283px) {
-  .donation_content_text .credit_card .credit_card_number h4 {
+  .donation__number {
     font-size: 0.7em;
   }
 }
-.donation_content_text .credit_card:hover {
-  background-color: #FDDCC4;
-}
-@media screen and (max-width: 700px) {
-  .donation_content_text .credit_card {
-    width: 50vw;
-  }
-}
-@media screen and (max-width: 550px) {
-  .donation_content_text .credit_card {
-    width: 50vw;
-    min-width: 281px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-@media screen and (max-width: 283px) {
-  .donation_content_text .credit_card {
-    width: 100%;
-    min-width: 85vw;
-  }
-}
-.donation_content_text .add_info {
+.donation__description {
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: 400;
@@ -1119,20 +1110,8 @@ body.active {
   color: #B2B2B2;
 }
 @media screen and (max-width: 700px) {
-  .donation_content_text .add_info {
+  .donation__description {
     text-align: justify;
-  }
-}
-@media screen and (min-width: 1101px) and (max-width: 1279px) {
-  .donation_content_text {
-    max-width: 400px;
-    min-width: 300px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .donation_content_text {
-    width: 100%;
-    align-items: center;
   }
 }
 
