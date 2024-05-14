@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // *SLIDER VARIABLES
     
     // *BURGER MENU FUNCTIONS
-        dark.classList.add('dark_screen');
+        dark.classList.add('dark-screen');
         dark.style.cssText = `
             background-color: black;
             opacity: 0.35;

@@ -85,7 +85,7 @@ body.active {
 }
 
 @media screen and (min-width: 715px) {
-  .dark_screen {
+  .dark-screen {
     width: 0px !important;
     height: 0px !important;
   }

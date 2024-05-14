@@ -1,0 +1,42 @@
+.button {
+  padding: 15px 42px;
+  width: 207px;
+  height: 52px;
+  background-color: $color-primary;
+  border-color: $color-primary;
+  border-radius: 100px;
+  transition: background-color 0.5s;
+
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+
+  color: $color-dark-3xl;
+  border: 2px solid $color-primary;
+
+  cursor: pointer;
+
+  &:hover {
+      background-color: $color-primary-light;
+      border: 2px solid $color-primary-light;
+  }
+
+  &_circle {
+    width: 52px;
+    padding: 0px;
+    border-radius: 100px;
+    background-color: $color-light-l;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:disabled {
+        border: 2px solid $color-dark-s;
+        &:hover {
+            background-color: $color-light-l;
+        }
+    }
+  }
+}
