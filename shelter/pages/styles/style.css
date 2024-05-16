@@ -14,6 +14,7 @@ html, body {
 
 body {
   background: url(/shelter/assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%) fixed;
+  overflow-x: hidden;
 }
 
 body.active {
@@ -23,6 +24,10 @@ body.active {
   body.active {
     overflow: scroll;
   }
+}
+
+.noscroll {
+  overflow: hidden;
 }
 
 .button {
@@ -309,32 +314,49 @@ body.active {
   color: #292929;
 }
 
+.burger {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  width: 30px;
+}
+.burger__line {
+  height: 2px;
+  background-color: #F1CDB3;
+}
+.burger__line_pets-page {
+  background-color: #000000;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
 }
 .menu__burger {
-  height: 60px;
   display: none;
   cursor: pointer;
+  transition: transform 1s;
 }
-@media screen and (max-width: 714px) {
+.menu__burger_open {
+  transform: rotate(90deg);
+}
+@media screen and (max-width: 767px) {
   .menu__burger {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: absolute;
-    right: 30px;
     z-index: 2;
   }
-  .menu__burger img {
-    transition: transform 0.5s;
-  }
 }
-@media screen and (max-width: 449px) {
-  .menu__burger {
-    right: 20px;
-  }
+.menu__overlay {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(41, 41, 41, 0.6);
+}
+.menu__overlay_visible {
+  display: block;
 }
 .menu__nav {
   width: 443px;
@@ -343,24 +365,28 @@ body.active {
   justify-content: space-between;
   align-items: center;
 }
-@media screen and (max-width: 714px) {
+@media (max-width: 767px) {
   .menu__nav {
     width: 320px;
-    height: calc(100vh + 30px);
+    height: 100vh;
     flex-direction: column;
     justify-content: center;
     row-gap: 40px;
-    position: fixed;
+    position: absolute;
     top: 0px;
-    left: calc(100vw + 320px);
+    right: 0px;
     background-color: #292929;
     opacity: 1;
-    transition: left 1s;
+    transform: translateX(320px);
+    transition: width 1s, opacity 1s, right 1s, transform 1s;
+    z-index: 1;
   }
 }
-.menu__nav_small-screen {
-  z-index: 1;
-  left: calc(100vw - 320px);
+.menu__nav_open {
+  transform: translateX(0);
+}
+.menu__nav_pets-page {
+  background-color: #FFFFFF;
 }
 .menu__link {
   text-decoration: none;
@@ -414,7 +440,7 @@ body.active {
 .menu__link_here_pets-page {
   color: #292929;
 }
-@media screen and (max-width: 714px) {
+@media screen and (max-width: 767px) {
   .menu__link {
     display: block;
     font-size: 32px;

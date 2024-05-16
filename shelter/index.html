@@ -3,7 +3,8 @@
    <head>
     <meta charset="UTF-8">
     <title>shelter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
     <link rel="stylesheet" href="/shelter/pages/styles/style.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/shelter/assets/icons/favicon_io/apple-touch-icon.png">
@@ -27,13 +28,18 @@
           </div>
   
           <div class="menu">
-            <div class="menu__burger"><img src="/shelter/assets/icons/burger.svg" alt="burger icon"></div>
-              <nav class="menu__nav">
-                <a class="menu__link menu__link_here" href="#about">About the shelter</a>
-                <a class="menu__link" href="/shelter/pages/pets/index.html">Our pets</a>
-                <a class="menu__link" href="#help">Help the shelter</a>
-                <a class="menu__link" href="#contacts">Contacts</a>
-              </nav>
+            <div class="burger menu__burger">
+              <div class="burger__line"></div>
+              <div class="burger__line"></div>
+              <div class="burger__line"></div>
+            </div>
+            <div class="menu__overlay"></div>
+            <nav class="menu__nav">
+              <a class="menu__link menu__link_here" href="#about">About the shelter</a>
+              <a class="menu__link" href="/shelter/pages/pets/index.html">Our pets</a>
+              <a class="menu__link" href="#help">Help the shelter</a>
+              <a class="menu__link" href="#contacts">Contacts</a>
+            </nav>
   
           </div>
           
@@ -258,5 +264,7 @@
         </div>
       </div>
     </footer>
+
+    <script type="text/javascript" src="burger.js"></script>
   </body>
 </html>

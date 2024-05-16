@@ -1,0 +1,16 @@
+.burger {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
+  width: 30px;
+
+  &__line {
+    height: 2px;
+    background-color: $color-primary;
+
+    &_pets-page {
+      background-color: $color-dark-4xl;
+    }
+  }
+}

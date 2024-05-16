@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>shelter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
     <link rel="stylesheet" href="/shelter/pages/styles/style.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/shelter/assets/icons/favicon_io/apple-touch-icon.png">
@@ -27,13 +27,18 @@
           </div>
   
           <div class="menu">
-            <div class="menu__burger"><img src="/shelter/assets/icons/burger.svg" alt="burger icon"></div>
-              <nav  class="menu__nav">
-                <a class="menu__link menu__link_pets-page" href="/shelter/index.html" >About the shelter</a>
-                <a class="menu__link menu__link_here menu__link_pets-page menu__link_here_pets-page" href="#pets" class="here">Our pets</a>
-                <a class="menu__link menu__link_pets-page" href="/shelter/index.html#help">Help the shelter</a>
-                <a class="menu__link menu__link_pets-page" href="#contacts">Contacts</a>
-              </nav>
+            <div class="burger menu__burger">
+              <div class="burger__line burger__line_pets-page"></div>
+              <div class="burger__line burger__line_pets-page"></div>
+              <div class="burger__line burger__line_pets-page"></div>
+            </div>
+            <div class="menu__overlay"></div>
+            <nav  class="menu__nav menu__nav_pets-page">
+              <a class="menu__link menu__link_pets-page" href="/shelter/index.html" >About the shelter</a>
+              <a class="menu__link menu__link_here menu__link_pets-page menu__link_here_pets-page" href="#pets" class="here">Our pets</a>
+              <a class="menu__link menu__link_pets-page" href="/shelter/index.html#help">Help the shelter</a>
+              <a class="menu__link menu__link_pets-page" href="#contacts">Contacts</a>
+            </nav>
           </div>
         </header>
       </div>
@@ -109,5 +114,7 @@
         </div>
       </div>
     </footer>
+
+    <script type="text/javascript" src="/shelter/burger.js"></script>
   </body>
 </html>

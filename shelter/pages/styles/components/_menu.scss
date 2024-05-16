@@ -5,26 +5,31 @@
   }
 
   &__burger {
-    height: 60px;
     display: none;
     cursor: pointer;
+    transition: transform 1s;
 
-    @media screen and (max-width:714px) {
+    &_open {
+      transform: rotate(90deg);
+    }
+    @media screen and (max-width:767px) {
       display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      position: absolute;
-      right: 30px;
       z-index: 2;
 
-      img {
-        transition: transform 0.5s;
-      }
-
     }
+  }
 
-    @media screen and (max-width: 449px) {
-      right: 20px;
+  &__overlay {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(41, 41, 41, 60%);
+
+    &_visible {
+      display: block;
     }
   }
 
@@ -35,23 +40,28 @@
     justify-content: space-between;
     align-items: center;
 
-    @media screen and (max-width:714px) {
+    @media (max-width: 767px) {
       width: 320px;
-      height: calc(100vh + 30px);
+      height: 100vh;
       flex-direction: column;
       justify-content: center;  
       row-gap: 40px; 
-      position: fixed;
+      position: absolute;
       top: 0px;
-      left: calc(100vw + 320px);
+      right: 0px;
       background-color: $color-dark-3xl;
       opacity: 1;
-      transition: left 1s;
+      transform: translateX(320px);
+      transition: width 1s, opacity 1s, right 1s, transform 1s;
+      z-index: 1;
     }
 
-    &_small-screen {
-      z-index: 1;
-      left: calc(100vw - 320px);
+    &_open {
+      transform: translateX(0);
+    }
+
+    &_pets-page {
+      background-color: $color-light-xl;
     }
   }
 
@@ -97,7 +107,7 @@
       }
     } 
 
-    @media screen and (max-width:714px) {
+    @media screen and (max-width:767px) {
       display: block;
       font-size: 32px;
 

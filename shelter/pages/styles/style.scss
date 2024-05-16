@@ -1,6 +1,7 @@
 @import "base";
 @import "variables";
 @import "mixins";
+@import "noscroll";
 
 @import "components/button";
 @import "components/h3";
@@ -10,6 +11,7 @@
 @import "components/start-screen";
 @import "components/header";
 @import "components/logo";
+@import "components/burger";
 @import "components/menu";
 @import "components/about";
 @import "components/pets";
