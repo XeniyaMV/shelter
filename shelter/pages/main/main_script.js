@@ -134,15 +134,15 @@ document.addEventListener('DOMContentLoaded', function () {
         let title = document.createElement('h4');
         let button = document.createElement('button');
 
-        divPetCard.classList.add('slider__pet-card');
-        divPetImg.classList.add('slider__pet-img');
+        divPetCard.classList.add('pet-card');
+        divPetImg.classList.add('pet-card__pet-img');
         petImg.classList.add('img');
         petImg.setAttribute('src', petInfo['img']);
         petImg.setAttribute('alt', petInfo['name']);
-        title.classList.add('slider__pet-name');
+        title.classList.add('pet-card__pet-name');
         title.textContent = petInfo['name'];
         button.classList.add('button');
-        button.classList.add('slider__button');
+        button.classList.add('pet-card__button');
         button.textContent = 'Learn more';
 
         divPetImg.append(petImg);
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             body.addEventListener('click', function(event) {
-                if (event.target.closest('.slider__pet-card')) {
+                if (event.target.closest('.pet-card')) {
                     return;
                 }
                 if (!event.target.closest('.popup-card__container')) {

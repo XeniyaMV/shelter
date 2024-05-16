@@ -109,8 +109,10 @@
   }
 
   &__location &__title {
-    width: 270px;
-    align-self: center;
+    @media screen and (max-width: 700px) {
+      width: 270px;
+      align-self: center;
+    }
   }
 
   &__location &__icon-container {

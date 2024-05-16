@@ -4,10 +4,13 @@
 
   &__link {
     @include reset-a;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
   }
 
   &__title{
-    margin-bottom: 10px;
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
@@ -15,6 +18,10 @@
     line-height: 110%;
     letter-spacing: 0.06em;
     text-align: center;
+
+    &_pets-page {
+      color: $color-dark-l;
+    }
   }
 
   &__subtitle {
@@ -25,5 +32,9 @@
     line-height: 15px;
     color: $color-light-xl;
     letter-spacing: 0.1em;
+
+    &_pets-page {
+      color: $color-dark-3xl;
+    }
   }
 }

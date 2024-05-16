@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // *BURGER MENU VARIABLES
-        let burgerMenuIcon = document.querySelector('.burger');
+        let burgerMenuIcon = document.querySelector('.menu__burger');
         let burgerClickCounter = 0;
         let nav = document.querySelector('nav');
         let body = document.querySelector('body');
@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
         body.addEventListener('click', function(event) {
-            if (nav.classList.contains('small_screen') && (!event.target.closest('.menu'))) {
-                nav.classList.remove('small_screen');
+            if (nav.classList.contains('menu__nav_small-screen') && (!event.target.closest('.menu'))) {
+                nav.classList.remove('menu__nav_small-screen');
                 burgerMenuIcon.firstElementChild.style.transform = '';
                 burgerClickCounter += 1;
                 burgerMenuIcon.style.position = 'absolute';
@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
         
         nav.addEventListener('click', function(event) {
             
-            if (event.target.tagName == 'A' && nav.classList.contains('small_screen')) {
-                nav.classList.remove('small_screen');
+            if (event.target.tagName == 'A' && nav.classList.contains('menu__nav_small-screen')) {
+                nav.classList.remove('menu__nav_small-screen');
                 burgerMenuIcon.firstElementChild.style.transform = '';
                 burgerClickCounter += 1;
                 burgerMenuIcon.style.position = 'absolute';
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (burgerClickCounter % 2 == 1) {
                 burgerMenuIcon.firstElementChild.style.transform = 'rotate(90deg)';
                 burgerMenuIcon.style.position = 'fixed';
-                nav.classList.add('small_screen');
+                nav.classList.add('menu__nav_small-screen');
                 body.classList.add('active');
                 dark.style.width = `100vw`;
                 body.prepend(dark);
@@ -61,69 +61,69 @@ document.addEventListener('DOMContentLoaded', function () {
             else {
                 burgerMenuIcon.firstElementChild.style.transform = '';
                 burgerMenuIcon.style.position = 'absolute';
-                nav.classList.remove('small_screen');
+                nav.classList.remove('menu__nav_small-screen');
                 body.classList.remove('active');
                 dark.style.width='0px';
             }
         });
 
         function getMobilePetCard(petInfo) {
-            let divPetCardContainer = document.createElement('div');
+            let divPetCardContainer = document.createElement('article');
             let innerText = `
-            <button class="circle_button"> <img src="/shelter/assets/icons/Vector.svg" alt="x"> </button>
-            <div class="clicked_card">
-                <div class="pet_img">
-                   <img src="${petInfo.img}" alt="${petInfo.name}">
+            <button class="button button_circle popup-card__close-button"> <img src="/shelter/assets/icons/Vector.svg" alt="x"> </button>
+            <div class="popup-card__container">
+                <div class="popup-card__pet-img">
+                   <img class="img" src="${petInfo.img}" alt="${petInfo.name}">
                 </div>
-                <div class="pet_info">
-                    <div class="title">
-                        <h3 class="pet_name">${petInfo.name}</h3>
-                        <h4 class="sub_title">${petInfo.type} - ${petInfo.breed}</h4>
+                <div class="popup-card__pet-info">
+                    <div class="popup-card__title">
+                        <h3 class="h3 popup-card__pet-name">${petInfo.name}</h3>
+                        <h4 class="popup-card__sub-title">${petInfo.type} - ${petInfo.breed}</h4>
                     </div>
-                    <p>${petInfo.description}</p>
-                    <ul>
-                        <li class="item"><b>Age</b>: ${petInfo.age}</li>
-                        <li class="item"><b>Inoculations</b>: ${petInfo.inoculations}</li>
-                        <li class="item"><b>Diseases</b>: ${petInfo.diseases}</li>
-                        <li class="item"><b>Parasites</b>: ${petInfo.parasites}</li>
+                    <p class="popup-card__description">${petInfo.description}</p>
+                    <ul class="popup-card__list">
+                        <li class="popup-card__list-item"><b>Age</b>: ${petInfo.age}</li>
+                        <li class="popup-card__list-item"><b>Inoculations</b>: ${petInfo.inoculations}</li>
+                        <li class="popup-card__list-item"><b>Diseases</b>: ${petInfo.diseases}</li>
+                        <li class="popup-card__list-item"><b>Parasites</b>: ${petInfo.parasites}</li>
                     </ul>
                 </div>
             </div>
             `
             
-            divPetCardContainer.classList.add('clicked_card_container');
+            divPetCardContainer.classList.add('popup-card');
             divPetCardContainer.innerHTML = innerText;
     
             return divPetCardContainer;
-    
-        }
+        } 
     
 
-        function getPetCard(petInfo, i) {
-            let divPetCard = document.createElement('div');
+        function getPetCard(petInfo) {
+            let divPetCard = document.createElement('article');
             let divPetImg = document.createElement('div');
             let petImg = document.createElement('img');
-            let p = document.createElement('p');
+            let title = document.createElement('h4');
             let button = document.createElement('button');
     
-            divPetCard.classList.add('pet_card');
-            divPetImg.classList.add('pet_img');
+            divPetCard.classList.add('pet-card');
+            divPetImg.classList.add('pet-card__pet-img');
+            petImg.classList.add('img');
             petImg.setAttribute('src', petInfo['img']);
             petImg.setAttribute('alt', petInfo['name']);
-            p.classList.add('pet_name');
-            p.textContent = petInfo['name'];
+            title.classList.add('pet-card__pet-name');
+            title.textContent = petInfo['name'];
+            button.classList.add('button');
+            button.classList.add('pet-card__button');
             button.textContent = 'Learn more';
     
             divPetImg.append(petImg);
             divPetCard.append(divPetImg);
-            divPetCard.append(p);
+            divPetCard.append(title);
             divPetCard.append(button);
-            divPetCard.style.order = i+1;
+    
             divPetCard.addEventListener('click', function() {
                 const petsContainer = document.querySelector('.pets');
-                const sliderContainer = document.querySelector('.slider_content');
-                const oldCard = document.querySelector('.clicked_card');
-                
+                const oldCard = document.querySelector('.popup-card');
                 const card = getMobilePetCard(petInfo);
                 let dark = document.createElement('div');
     
@@ -136,36 +136,35 @@ document.addEventListener('DOMContentLoaded', function () {
                     top: 0px;
                     left: 0px;
                 `;
+    
                 if (oldCard) {
                     oldCard.remove();
                 }
-
     
                 petsContainer.append(card);
                 petsContainer.append(dark);
                 body.style.overflow = 'hidden';
     
-                let buttonX = document.querySelector('.clicked_card_container button');
+                let buttonX = document.querySelector('.popup-card .button');
                 buttonX.addEventListener('click', function() {
                     card.remove();
                     dark.remove();
                     body.style.overflow = '';
     
-                })
+                });
     
                 body.addEventListener('click', function(event) {
-                    if (event.target.closest('.pet_card')) {
+                    if (event.target.closest('.pet-card')) {
                         return;
                     }
-                    if (!event.target.closest('.clicked_card')) {
+                    if (!event.target.closest('.popup-card__container')) {
                         card.remove();
                         dark.remove();
                         body.style.overflow = '';
                     }
-                })
+                });
     
             })
-    
     
             return divPetCard;
         }
@@ -187,8 +186,8 @@ document.addEventListener('DOMContentLoaded', function () {
         async function setPaginator(jsonPath) {
             const response = await fetch(jsonPath);
             const resJSON = await response.json();
-            const paginatorContainer = document.querySelector('.slider_content');
-            const pagRight = document.querySelector('.paginator_right');
+            const paginatorContainer = document.querySelector('.pagination__cards');
+            const pagRight = document.querySelector('.pagination__right');
             let cardsIndexes = [];
             let cards = [];
             let pageNumber = 0;
@@ -224,6 +223,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         setPaginator('/shelter/assets/pets_description.json');
-
-
 })
