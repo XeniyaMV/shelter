@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
 // *BURGER MENU VARIABLES
     // let burgerMenuIcon = document.querySelector('.menu__burger');
@@ -229,166 +230,166 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
     
-    async function setSlider(jsonPath) {
-        const response = await fetch(jsonPath);
-        const resJSON = await response.json();
-        let sliderContainer = document.querySelector('.slider__content');
-        let flag = 0;
+    // async function setSlider(jsonPath) {
+    //     const response = await fetch(jsonPath);
+    //     const resJSON = await response.json();
+    //     let sliderContainer = document.querySelector('.slider__content');
+    //     let flag = 0;
 
-        const rightButton = document.querySelector('.slider__right');
-        const leftButton = document.querySelector('.slider__left');
+    //     const rightButton = document.querySelector('.slider__right');
+    //     const leftButton = document.querySelector('.slider__left');
 
-        let cards = [];
+    //     let cards = [];
         
         
-        let k = Math.floor(sliderContainer.clientWidth / 270);
-        let currentCardsIndexes = getSample(resJSON.length, k);
-        let previousCardsIndexes = currentCardsIndexes;
+    //     let k = Math.floor(sliderContainer.clientWidth / 270);
+    //     let currentCardsIndexes = getSample(resJSON.length, k);
+    //     let previousCardsIndexes = currentCardsIndexes;
         
-        for (let i of currentCardsIndexes) {
-            let petDiv = getPetCard(resJSON[i]);
-            cards.push(petDiv);
-            sliderContainer.append(petDiv);
-        }
+    //     for (let i of currentCardsIndexes) {
+    //         let petDiv = getPetCard(resJSON[i]);
+    //         cards.push(petDiv);
+    //         sliderContainer.append(petDiv);
+    //     }
 
 
 
         
-        rightButton.addEventListener('click', function(event) {
-            const gap = (sliderContainer.clientWidth == 990) ? (990 - 270*3)/2 : (580 - 270*2);
-            let k = 3;
+    //     rightButton.addEventListener('click', function(event) {
+    //         const gap = (sliderContainer.clientWidth == 990) ? (990 - 270*3)/2 : (580 - 270*2);
+    //         let k = 3;
             
-            switch(sliderContainer.clientWidth) {
-                case 990:
-                    k = 3;
-                    break;
-                case 580:
-                    k = 2;
-                    break;
-                case 270:
-                    k = 1
-                    break;                    
-            }
+    //         switch(sliderContainer.clientWidth) {
+    //             case 990:
+    //                 k = 3;
+    //                 break;
+    //             case 580:
+    //                 k = 2;
+    //                 break;
+    //             case 270:
+    //                 k = 1
+    //                 break;                    
+    //         }
 
-            if (flag == 0 || flag == 1) {
-                previousCardsIndexes = currentCardsIndexes.splice(0);
-                for (let i = 0; i < previousCardsIndexes.length - k; i++) {
-                    cards[i].remove();
-                }
-                cards.splice(0,previousCardsIndexes.length-k);
-                previousCardsIndexes.splice(0,previousCardsIndexes.length - k);
-                currentCardsIndexes = getNewSetCardsIndexes(resJSON.length, previousCardsIndexes, k);
-            }
-            else {
-                for (let i = 0; i < previousCardsIndexes.length - k; i++) {
-                    cards[i].remove();
-                }
-                cards.splice(0,previousCardsIndexes.length-k);
-                previousCardsIndexes.splice(0,previousCardsIndexes.length - k);
-                [previousCardsIndexes, currentCardsIndexes] = [currentCardsIndexes, previousCardsIndexes];
-            }
+    //         if (flag == 0 || flag == 1) {
+    //             previousCardsIndexes = currentCardsIndexes.splice(0);
+    //             for (let i = 0; i < previousCardsIndexes.length - k; i++) {
+    //                 cards[i].remove();
+    //             }
+    //             cards.splice(0,previousCardsIndexes.length-k);
+    //             previousCardsIndexes.splice(0,previousCardsIndexes.length - k);
+    //             currentCardsIndexes = getNewSetCardsIndexes(resJSON.length, previousCardsIndexes, k);
+    //         }
+    //         else {
+    //             for (let i = 0; i < previousCardsIndexes.length - k; i++) {
+    //                 cards[i].remove();
+    //             }
+    //             cards.splice(0,previousCardsIndexes.length-k);
+    //             previousCardsIndexes.splice(0,previousCardsIndexes.length - k);
+    //             [previousCardsIndexes, currentCardsIndexes] = [currentCardsIndexes, previousCardsIndexes];
+    //         }
 
-            for (let i of currentCardsIndexes) {
-                if (currentCardsIndexes.indexOf(i) < k) {
-                    let petDiv = getPetCard(resJSON[i]);
-                    cards.push(petDiv);
-                    sliderContainer.append(petDiv);
-                }
-            }
+    //         for (let i of currentCardsIndexes) {
+    //             if (currentCardsIndexes.indexOf(i) < k) {
+    //                 let petDiv = getPetCard(resJSON[i]);
+    //                 cards.push(petDiv);
+    //                 sliderContainer.append(petDiv);
+    //             }
+    //         }
             
-            sliderContainer.scrollLeft += sliderContainer.clientWidth + gap;
+    //         sliderContainer.scrollLeft += sliderContainer.clientWidth + gap;
             
-            setTimeout(() => {
-                for (let i = 0; i < previousCardsIndexes.length; i++) {
-                    cards[i].remove();
-                }
-                cards.splice(0,previousCardsIndexes.length);
+    //         setTimeout(() => {
+    //             for (let i = 0; i < previousCardsIndexes.length; i++) {
+    //                 cards[i].remove();
+    //             }
+    //             cards.splice(0,previousCardsIndexes.length);
 
-            }, 600)
-            flag = 1;        
-        })
+    //         }, 600)
+    //         flag = 1;        
+    //     })
         
 
         
         
         
-        leftButton.addEventListener('click', function(event) {
-            const gap = (sliderContainer.clientWidth == 990) ? (990 - 270*3)/2 : (580 - 270*2);
-            let k = 3;
+    //     leftButton.addEventListener('click', function(event) {
+    //         const gap = (sliderContainer.clientWidth == 990) ? (990 - 270*3)/2 : (580 - 270*2);
+    //         let k = 3;
             
         
-            switch(sliderContainer.clientWidth) {
-                case 990:
-                    k = 3;
-                    break;
-                case 580:
-                    k = 2;
-                    break;
-                case 270:
-                    k = 1
-                    break;                    
-            }
+    //         switch(sliderContainer.clientWidth) {
+    //             case 990:
+    //                 k = 3;
+    //                 break;
+    //             case 580:
+    //                 k = 2;
+    //                 break;
+    //             case 270:
+    //                 k = 1
+    //                 break;                    
+    //         }
 
-            if (flag == 0 || flag == -1) {
-                previousCardsIndexes = currentCardsIndexes.splice(0);
-                for (let i = 0; i < previousCardsIndexes.length - k; i++) {
-                    cards[i].remove();
-                }
-                cards.splice(0,previousCardsIndexes.length-k);
-                previousCardsIndexes.splice(0,previousCardsIndexes.length - k);
-                currentCardsIndexes = getNewSetCardsIndexes(resJSON.length, previousCardsIndexes, k);
+    //         if (flag == 0 || flag == -1) {
+    //             previousCardsIndexes = currentCardsIndexes.splice(0);
+    //             for (let i = 0; i < previousCardsIndexes.length - k; i++) {
+    //                 cards[i].remove();
+    //             }
+    //             cards.splice(0,previousCardsIndexes.length-k);
+    //             previousCardsIndexes.splice(0,previousCardsIndexes.length - k);
+    //             currentCardsIndexes = getNewSetCardsIndexes(resJSON.length, previousCardsIndexes, k);
 
 
-            }
-            else {
-                for (let i = 0; i < previousCardsIndexes.length - k; i++) {
-                    cards[i].remove();
-                }
-                cards.splice(0,previousCardsIndexes.length-k);
-                previousCardsIndexes.splice(0,previousCardsIndexes.length - k);
-                [previousCardsIndexes, currentCardsIndexes] = [currentCardsIndexes, previousCardsIndexes];
-            }
+    //         }
+    //         else {
+    //             for (let i = 0; i < previousCardsIndexes.length - k; i++) {
+    //                 cards[i].remove();
+    //             }
+    //             cards.splice(0,previousCardsIndexes.length-k);
+    //             previousCardsIndexes.splice(0,previousCardsIndexes.length - k);
+    //             [previousCardsIndexes, currentCardsIndexes] = [currentCardsIndexes, previousCardsIndexes];
+    //         }
 
-            let count = 1;
-            for (let i of currentCardsIndexes) {
-                if (currentCardsIndexes.indexOf(i) < k) {
-                    let petDiv = getPetCard(resJSON[i]);
-                    petDiv.style.transform = `translateX(${-(270+gap)*count}px)`;
-                    sliderContainer.prepend(petDiv);
-                    for (let j = 0; j < cards.length; j++) {
-                        cards[j].style.transition = 'transform 0s';
-                        cards[j].style.transform = `translateX(${-(270+gap)*count}px)`;
-                    }
-                    cards.push(petDiv);
-                    count+=1;
+    //         let count = 1;
+    //         for (let i of currentCardsIndexes) {
+    //             if (currentCardsIndexes.indexOf(i) < k) {
+    //                 let petDiv = getPetCard(resJSON[i]);
+    //                 petDiv.style.transform = `translateX(${-(270+gap)*count}px)`;
+    //                 sliderContainer.prepend(petDiv);
+    //                 for (let j = 0; j < cards.length; j++) {
+    //                     cards[j].style.transition = 'transform 0s';
+    //                     cards[j].style.transform = `translateX(${-(270+gap)*count}px)`;
+    //                 }
+    //                 cards.push(petDiv);
+    //                 count+=1;
                     
-                    setTimeout(() => {
-                        for (let j = 0; j < cards.length; j++) {
-                            cards[j].style.transition = '';
-                            cards[j].style.transform = `translateX(0px)`;
-                        }
-                    }, 100);
-                }
+    //                 setTimeout(() => {
+    //                     for (let j = 0; j < cards.length; j++) {
+    //                         cards[j].style.transition = '';
+    //                         cards[j].style.transform = `translateX(0px)`;
+    //                     }
+    //                 }, 100);
+    //             }
 
-            }
-
-
-            setTimeout(() => {
-
-                for (let i = 0; i < previousCardsIndexes.length; i++) {
-                    cards[i].remove();
-                }
-                cards.splice(0,previousCardsIndexes.length);
-            }, 600)
-
-            flag = -1;
-
-        })
+    //         }
 
 
-    }
+    //         setTimeout(() => {
+
+    //             for (let i = 0; i < previousCardsIndexes.length; i++) {
+    //                 cards[i].remove();
+    //             }
+    //             cards.splice(0,previousCardsIndexes.length);
+    //         }, 600)
+
+    //         flag = -1;
+
+    //     })
+
+
+    // }
     
-    setSlider('/shelter/assets/pets_description.json');
+    // setSlider('/shelter/assets/pets.json');
 
 
 

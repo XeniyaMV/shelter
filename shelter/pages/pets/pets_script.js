@@ -222,5 +222,5 @@ document.addEventListener('DOMContentLoaded', function () {
             })
         }
 
-        setPaginator('/shelter/assets/pets_description.json');
+        setPaginator('/shelter/assets/pets.json');
 })
