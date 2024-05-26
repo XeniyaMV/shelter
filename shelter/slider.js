@@ -1,17 +1,3 @@
-function getSample(n, k) {
-  const indexes = [];
-  const res = [];
-  for (let i = 0; i < n; i++) {
-    indexes.push(i);
-  }
-  for (let i = 0; i < k; i++) {
-      const index = Math.floor(Math.random()*indexes.length);
-      res.push(indexes[index]);
-      indexes.splice(index, 1);
-  }
-  return res;
-}
-
 function scroll(slider, pets, cardSize, direction) {
   const gap = slider.currentCardsNumber !== 1 ? (slider.currentWidth - slider.currentCardsNumber * cardSize) / (slider.currentCardsNumber - 1) : 40;
   const currentPetInds = slider.currentPetInds;
@@ -22,7 +8,7 @@ function scroll(slider, pets, cardSize, direction) {
     slider.currentPetInds = slider.prevPetInds.inds;
   } else {
     const availablePetInds = pets.map((_, i) => i).filter((i) => !slider.currentPetInds.includes(i));
-    const newSample = getSample(availablePetInds.length, slider.currentCardsNumber);
+    const newSample = getSemple(availablePetInds.length, slider.currentCardsNumber);
     slider.currentPetInds = newSample.map((i) => availablePetInds[i]);
   }
 
@@ -76,7 +62,7 @@ async function setSlider() {
     if (slider.currentWidth !== newSliderWidth) {
       slider.sliderContainer.innerHTML = '';
       slider.currentWidth = newSliderWidth;
-      slider.currentPetInds = getSample(pets.length, slider.currentCardsNumber);
+      slider.currentPetInds = getSemple(pets.length, slider.currentCardsNumber);
       slider.currentPetInds.map((i) => getPetCard(pets[i])).forEach((pet) => slider.sliderContainer.append(pet));
       slider.prevPetInds.inds = [];
       slider.prevPetInds.side = null;
@@ -86,7 +72,7 @@ async function setSlider() {
   const pets = await getPetDescriptions();
 
   if (pets !== 'FAIL') {
-    slider.currentPetInds = getSample(pets.length, slider.currentCardsNumber);
+    slider.currentPetInds = getSemple(pets.length, slider.currentCardsNumber);
     slider.currentPetInds.map((i) => getPetCard(pets[i])).forEach((pet) => slider.sliderContainer.append(pet));
     let isScrolling = false;
 

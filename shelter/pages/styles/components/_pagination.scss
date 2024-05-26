@@ -12,15 +12,22 @@
     row-gap: 30px;
 
     padding: 15px 0px;
-
-    width: 100%;
-    max-width: 1200px;
+    width: 1200px;
     max-height: 930px;
     overflow: hidden;
 
-    @media screen and (max-width: 1030px) {
+    @media screen and (max-width: 1279px) {
+      width: 890px;
+    }
+
+    @media screen and (max-width: 1010px) {
       padding-top: 0px;
+      width: 580px;
       max-height: 1365px;
+    }
+
+    @media screen and (max-width: 700px) {
+      width: 270px;
     }
   }
 
@@ -66,6 +73,7 @@
     &:disabled {
         cursor: default;
         background-image: url("/shelter/assets/icons/pag(light).svg");
+        transform: rotate(180deg);
     }
   }
 
@@ -74,6 +82,7 @@
     &:disabled {
         cursor: default;
         background-image: url("/shelter/assets/icons/fast_pag(light).svg");
+        transform: rotate(180deg);
     }
   }
 
