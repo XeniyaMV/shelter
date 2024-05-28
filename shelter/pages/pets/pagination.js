@@ -66,7 +66,6 @@ async function setPagination() {
     };
 
     pagination.petInds = getPetInds(pets.length, 48);
-    console.log(pagination.petInds);
     setCurrentPageCards(0, pagination.cardsNumber);
 
     const handlePaginationResize = () => {

@@ -17,16 +17,10 @@ body {
   overflow-x: hidden;
 }
 
-body.active {
+.noscroll {
   overflow: hidden;
 }
-@media screen and (min-width: 714px) {
-  body.active {
-    overflow: scroll;
-  }
-}
-
-.noscroll {
+.noscroll_pets {
   overflow: hidden;
 }
 
@@ -602,6 +596,18 @@ body.active {
     row-gap: 20px;
     column-gap: 80px;
   }
+}
+.pets__overlay {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(41, 41, 41, 0.6);
+}
+.pets__overlay_visible {
+  display: block;
 }
 @media screen and (min-width: 600px) and (max-width: 1100px) {
   .pets {
@@ -1313,6 +1319,7 @@ body.active {
   flex-direction: column;
   align-items: center;
   row-gap: 45px;
+  width: 100%;
 }
 .pagination__cards {
   display: flex;

@@ -17,5 +17,15 @@ const getPetCard = (petInfo) => {
   card.append(cardName);
   card.append(cardButton);
 
+  card.addEventListener('click', () => {
+    const petsContainer = document.querySelector('.pets');
+    const overlay = document.querySelector('.pets__overlay');
+    const popupCard = getPopupPetCard(petInfo);
+
+    petsContainer.append(popupCard);
+    overlay.classList.add('pets__overlay_visible');
+    document.body.classList.add('noscroll_pets');
+  })
+
   return card;
 };

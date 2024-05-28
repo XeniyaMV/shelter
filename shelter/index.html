@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>shelter</title>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
-    <link rel="stylesheet" href="/shelter/pages/styles/style.css">
+    <link rel="stylesheet" href="/shelter/styles/style.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/shelter/assets/icons/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/shelter/assets/icons/favicon_io/favicon-32x32.png">
@@ -12,8 +12,6 @@
     <link rel="manifest" href="/shelter/assets/icons/favicon_io/site.webmanifest">
 
     <script type="text/javascript" src="/shelter/pages/main/index.js"></script>
-    <!-- <script type="text/javascript" src="/shelter/assets/pets_description.json"></script> -->
-    <!-- <script type="text/javascript" src="/shelter/pages/main/main_script.js"></script> -->
   </head>
   <body>
     <section class="start-screen">
@@ -96,6 +94,7 @@
 
           <button class="button pets__button" onclick="window.location.href='/shelter/pages/pets/index.html'">Get to know the rest</button>
         </div>
+        <div class="pets__overlay"></div>
       </section>
 
       <section class="help" id="help">
@@ -264,10 +263,12 @@
       </div>
     </footer>
 
-    <script type="text/javascript" src="burger.js"></script>
-    <script type="text/javascript" src="getPetCard.js"></script>
-    <script type="text/javascript" src="getPetDescriptions.js"></script>
-    <script type="text/javascript" src="getSemple.js"></script>
-    <script type="text/javascript" src="slider.js"></script>
+    <script type="text/javascript" src="shared-scripts/burger.js"></script>
+    <script type="text/javascript" src="shared-scripts/getPetCard.js"></script>
+    <script type="text/javascript" src="shared-scripts/getPopupPetCard.js"></script>
+    <script type="text/javascript" src="shared-scripts/getPetDescriptions.js"></script>
+    <script type="text/javascript" src="shared-scripts/getSemple.js"></script>
+    <script type="text/javascript" src="pages/main/slider.js"></script>
+    <script type="text/javascript" src="shared-scripts/pets-overlay.js"></script>
   </body>
 </html>

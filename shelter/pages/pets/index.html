@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>shelter</title>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
-    <link rel="stylesheet" href="/shelter/pages/styles/style.css">
+    <link rel="stylesheet" href="/shelter/styles/style.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/shelter/assets/icons/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/shelter/assets/icons/favicon_io/favicon-32x32.png">
@@ -12,8 +12,6 @@
     <link rel="manifest" href="/shelter/assets/icons/favicon_io/site.webmanifest">
 
     <script type="text/javascript" src="/shelter/pages/main/index.js"></script>
-    <!-- <script type="text/javascript" src="/shelter/assets/pets_description.json"></script> -->
-    <script type="text/javascript" src="/shelter/pages/pets/pets_script.js"></script>
   </head>
   <body>
     <section class="start-screen start-screen_pets-page">
@@ -62,6 +60,7 @@
           </article>
 
         </div>
+        <div class="pets__overlay"></div>
       </section>
     </main>
 
@@ -115,10 +114,12 @@
       </div>
     </footer>
 
-    <script type="text/javascript" src="/shelter/burger.js"></script>
-    <script type="text/javascript" src="/shelter/getPetCard.js"></script>
-    <script type="text/javascript" src="/shelter/getPetDescriptions.js"></script>
-    <script type="text/javascript" src="/shelter/getSemple.js"></script>
+    <script type="text/javascript" src="/shelter/shared-scripts/burger.js"></script>
+    <script type="text/javascript" src="/shelter/shared-scripts/getPetCard.js"></script>
+    <script type="text/javascript" src="/shelter/shared-scripts/getPopupPetCard.js"></script>
+    <script type="text/javascript" src="/shelter/shared-scripts/getPetDescriptions.js"></script>
+    <script type="text/javascript" src="/shelter/shared-scripts/getSemple.js"></script>
     <script type="text/javascript" src="pagination.js"></script>
+    <script type="text/javascript" src="/shelter/shared-scripts/pets-overlay.js"></script>
   </body>
 </html>
