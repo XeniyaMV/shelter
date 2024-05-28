@@ -1,0 +1,40 @@
+.pet-card {
+  width: 270px;
+  height: 435px;
+  background-color: $color-light-s;
+  border-radius: 9px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  transition: background-color 0.5s, transform 0.65s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-light-xl;
+  }
+
+  &__pet-img {
+    width: 270px;
+  }
+
+  &__pet-name {
+    color: $color-dark-l;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22.72px;
+    letter-spacing: 0.06em;
+  }
+
+  &__button {
+    width: 187px;
+    background-color: $color-light-s;
+  }
+
+  &:hover &__button {
+    background-color: $color-primary-light;
+    border: 2px solid $color-primary-light;
+  }
+}

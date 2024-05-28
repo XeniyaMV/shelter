@@ -1,0 +1,49 @@
+.slider {
+  &__content {
+    width: 990px;
+    overflow: hidden;
+    display: flex;
+    height: 435px;
+    column-gap: calc((990px - 270px*3)/2);
+    grid-area: slider;
+    scroll-behavior: smooth;
+    transition: transform 0.5s;
+
+    @media screen and (min-width:1185px) and (max-width: 1279px){
+      width: 990px;
+      column-gap: calc((990px - 270px*3)/2);
+    }
+
+    @media screen and (min-width:683px) and (max-width:1184px) {
+      width: 580px;
+      column-gap: calc((580px - 270px*2));
+    }
+
+    @media screen and (max-width:683px) {
+      width: 270px;
+      justify-self: center;
+      column-gap: calc((580px - 270px*2));
+    }
+  }
+
+  &__right {
+    background-image: url("/shelter/assets/icons/Arrow.svg");
+    transform: rotate(180deg);
+    grid-area: right;
+
+    @media screen and (min-width: 683px) and (max-width: 715px) {
+      order: 2;
+    }
+  }
+
+  &__left {
+    background-image: url("/shelter/assets/icons/Arrow.svg");
+    grid-area: left;
+    @media screen and (min-width: 683px) and (max-width: 715px) {
+      order: 1;
+    }
+    @media screen and (max-width: 683px) {
+        justify-self: end;
+    }
+  }
+}
