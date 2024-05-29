@@ -83,13 +83,6 @@ body {
   height: auto;
 }
 
-@media screen and (min-width: 715px) {
-  .dark-screen {
-    width: 0px !important;
-    height: 0px !important;
-  }
-}
-
 .start-screen__container {
   min-height: 908px;
   max-width: 1280px;
@@ -652,7 +645,7 @@ body {
   }
 }
 .slider__right {
-  background-image: url("/shelter/assets/icons/Arrow.svg");
+  background-image: url("/shelter/shelter/assets/icons/Arrow.svg");
   transform: rotate(180deg);
   grid-area: right;
 }
@@ -662,7 +655,7 @@ body {
   }
 }
 .slider__left {
-  background-image: url("/shelter/assets/icons/Arrow.svg");
+  background-image: url("/shelter/shelter/assets/icons/Arrow.svg");
   grid-area: left;
 }
 @media screen and (min-width: 683px) and (max-width: 715px) {
@@ -1364,37 +1357,37 @@ body {
   max-width: 340px;
 }
 .pagination__left {
-  background-image: url("/shelter/assets/icons/pag.svg");
+  background-image: url("/shelter/shelter/assets/icons/pag.svg");
   transform: rotate(180deg);
 }
 .pagination__left:disabled {
   cursor: default;
-  background-image: url("/shelter/assets/icons/pag(light).svg");
+  background-image: url("/shelter/shelter/assets/icons/pag(light).svg");
   transform: rotate(0deg);
 }
 .pagination__left_fast {
-  background-image: url("/shelter/assets/icons/fast_pag.svg");
+  background-image: url("/shelter/shelter/assets/icons/fast_pag.svg");
   transform: rotate(180deg);
 }
 .pagination__left_fast:disabled {
   cursor: default;
-  background-image: url("/shelter/assets/icons/fast_pag(light).svg");
+  background-image: url("/shelter/shelter/assets/icons/fast_pag(light).svg");
   transform: rotate(0deg);
 }
 .pagination__right {
-  background-image: url("/shelter/assets/icons/pag.svg");
+  background-image: url("/shelter/shelter/assets/icons/pag.svg");
 }
 .pagination__right:disabled {
   cursor: default;
-  background-image: url("/shelter/assets/icons/pag(light).svg");
+  background-image: url("/shelter/shelter/assets/icons/pag(light).svg");
   transform: rotate(180deg);
 }
 .pagination__right_fast {
-  background-image: url("/shelter/assets/icons/fast_pag.svg");
+  background-image: url("/shelter/shelter/assets/icons/fast_pag.svg");
 }
 .pagination__right_fast:disabled {
   cursor: default;
-  background-image: url("/shelter/assets/icons/fast_pag(light).svg");
+  background-image: url("/shelter/shelter/assets/icons/fast_pag(light).svg");
   transform: rotate(180deg);
 }
 @media screen and (max-width: 1030px) {

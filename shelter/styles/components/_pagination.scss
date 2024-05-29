@@ -50,39 +50,39 @@
   }
 
   &__left {
-    background-image: url("/shelter/assets/icons/pag.svg");
+    background-image: url("/shelter/shelter/assets/icons/pag.svg");
     transform: rotate(180deg);
     &:disabled {
         cursor: default;
-        background-image: url("/shelter/assets/icons/pag(light).svg");
+        background-image: url("/shelter/shelter/assets/icons/pag(light).svg");
         transform: rotate(0deg);
     }
   }
 
   &__left_fast {
-    background-image: url("/shelter/assets/icons/fast_pag.svg");
+    background-image: url("/shelter/shelter/assets/icons/fast_pag.svg");
     transform: rotate(180deg);
     &:disabled {
         cursor: default;
-        background-image: url("/shelter/assets/icons/fast_pag(light).svg");
+        background-image: url("/shelter/shelter/assets/icons/fast_pag(light).svg");
         transform: rotate(0deg);
     }
   }
 
   &__right {
-    background-image: url("/shelter/assets/icons/pag.svg");
+    background-image: url("/shelter/shelter/assets/icons/pag.svg");
     &:disabled {
         cursor: default;
-        background-image: url("/shelter/assets/icons/pag(light).svg");
+        background-image: url("/shelter/shelter/assets/icons/pag(light).svg");
         transform: rotate(180deg);
     }
   }
 
   &__right_fast {
-    background-image: url("/shelter/assets/icons/fast_pag.svg");
+    background-image: url("/shelter/shelter/assets/icons/fast_pag.svg");
     &:disabled {
         cursor: default;
-        background-image: url("/shelter/assets/icons/fast_pag(light).svg");
+        background-image: url("/shelter/shelter/assets/icons/fast_pag(light).svg");
         transform: rotate(180deg);
     }
   }
