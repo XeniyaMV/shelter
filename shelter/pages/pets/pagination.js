@@ -55,7 +55,7 @@ async function setPagination() {
   };
 
 
-  const pets = await getPetDescriptions('/shelter/assets/pets.json');
+  const pets = await getPetDescriptions('/shelter/shelter/assets/pets.json');
 
   if (pets !== 'FAIL') {
     const setCurrentPageCards = (startInd, endInd) => {
