@@ -17,7 +17,7 @@ const getPopupPetCard = (petInfo) => {
   description.className = 'popup-card__description';
   list.className = 'popup-card__list';
 
-  closeButton.innerHTML = '<img src="/shelter/assets/icons/Vector.svg" alt="x">';
+  closeButton.innerHTML = '<img src="/shelter/shelter/assets/icons/Vector.svg" alt="x">';
   cardImgContainer.innerHTML = `<img class="img" src="${petInfo.img}" alt="${petInfo.name} pic"/>`;
   title.innerHTML = `
     <h3 class="h3 popup-card__pet-name">${petInfo.name}</h3>
