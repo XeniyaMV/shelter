@@ -49,7 +49,7 @@ This project is broken down into three parts. Each part takes a week to implemen
 
 ## Deploy
 
-Find the deployed version of the project [here]().
+Find the deployed version of the project [here](https://xeniyamv.github.io/shelter/shelter/).
 
 ## Technology Stack
   * **HTML5**
