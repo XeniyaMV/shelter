@@ -54,4 +54,4 @@ Find the deployed version of the project [here](https://xeniyamv.github.io/shelt
 ## Technology Stack
   * **HTML5**
   * **[Sass](https://sass-lang.com/)**: A CSS extension
-
+  * **[JavaScript](https://www.javascript.com/)**
